@@ -13,9 +13,11 @@
   <title>Gaurav Jadhav | AI & Product Engineer</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231d4fff'/%3E%3Ctext x='9' y='44' font-family='Arial,sans-serif' font-size='39' font-weight='700' fill='white'%3Egj%3C/text%3E%3C/svg%3E">
   <link rel="preload" href="assets/fonts/SpaceGrotesk.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=20261007-bitling">
+  <link rel="stylesheet" href="styles.css?v=20261007-search-motion">
+  <link rel="stylesheet" href="search-motion.css?v=1">
   <script type="module" src="app.js"></script>
   <script type="module" src="bitling-preview.js?v=1"></script>
+  <script type="module" src="search-motion.js?v=1"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -53,7 +55,34 @@
       </article>
       <div class="project-grid">
         <article class="project project-inneed"><div class="project-visual rental-visual" aria-label="INNEED rental lifecycle diagram"><div class="visual-top"><span>INNEED</span><span>RENTAL MARKETPLACE</span></div><div class="rental-word">Own less.<br><em>Do more.</em></div><div class="rental-flow"><span>Discover</span><span>Rent</span><span>Return</span></div></div><div class="project-copy"><span class="project-number">02 / FULL-STACK PRODUCT</span><h3>INNEED</h3><p>A rental marketplace built around the whole journey: discovery, vendor onboarding, checkout, payment verification, disputes, and administration.</p><div class="tags"><span>Marketplace</span><span>Payments</span><span>Workflows</span></div><div class="project-links"><button class="case-link" data-case="inneed">Inside the project <span aria-hidden="true">+</span></button><a href="https://github.com/jadhavgaurav/inneed" target="_blank" rel="noopener noreferrer">Source</a></div></div></article>
-        <article class="project project-search"><div class="project-visual search-visual" aria-label="Multimodal search: text and images connect through an embedding space"><div class="visual-top"><span>MULTIMODAL SEARCH</span><span>AI APPLICATION</span></div><div class="embedding-diagram"><span class="embedding-input">Words</span><div class="embedding-space"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><b>Shared meaning</b></div><span class="embedding-input">Images</span></div><div class="visual-bottom"><span>TEXT + IMAGE</span><span>ONE SEARCH SPACE</span></div></div><div class="project-copy"><span class="project-number">03 / MACHINE LEARNING</span><h3>Search beyond keywords.</h3><p>Find images with a sentence or another image. CLIP embeddings and vector search connect a FastAPI backend to a React interface.</p><div class="tags"><span>CLIP</span><span>ChromaDB</span><span>FastAPI</span></div><div class="project-links"><button class="case-link" data-case="search">Inside the project <span aria-hidden="true">+</span></button><a href="https://github.com/jadhavgaurav/multimodal-search-platform" target="_blank" rel="noopener noreferrer">Source</a></div></div></article>
+        <article class="project project-search"><div class="project-visual search-visual" aria-label="Multimodal search: text and images connect through an embedding space"><div class="visual-top"><span>MULTIMODAL SEARCH</span><span>AI APPLICATION</span></div><div class="embedding-diagram">
+          <svg class="search-diagram" viewBox="0 0 440 190" role="img" aria-labelledby="search-diagram-title search-diagram-description" data-playing="false">
+            <title id="search-diagram-title">Words and images, one search space</title>
+            <desc id="search-diagram-description">Conceptual animation: a text signal and an image signal enter a shared embedding space. Nearby points light up together to illustrate related meaning. Positions are illustrative, not measured CLIP embeddings.</desc>
+            <circle class="search-space-halo" cx="220" cy="95" r="80"/>
+            <circle class="search-space-boundary" cx="220" cy="95" r="78"/>
+            <circle class="search-space-inner" cx="220" cy="95" r="62"/>
+            <path class="search-signal-path" d="M 88 95 C 132 95 157 133 209 133"/>
+            <path class="search-signal-path" d="M 352 95 C 308 95 279 133 227 133"/>
+            <g class="search-background-points">
+              <circle cx="181" cy="53" r="2.2"/><circle cx="230" cy="43" r="2.2"/><circle cx="261" cy="70" r="2.2"/>
+              <circle cx="169" cy="106" r="2.2"/><circle cx="183" cy="137" r="2.2"/><circle cx="253" cy="137" r="2.2"/>
+              <circle cx="263" cy="110" r="2.2"/><circle cx="212" cy="155" r="2.2"/>
+            </g>
+            <g class="search-match">
+              <ellipse class="search-match-halo" cx="218" cy="133" rx="27" ry="19"/>
+              <path class="search-match-link" d="M 209 133 H 227"/>
+              <rect class="search-text-point" x="206" y="130" width="6" height="6" rx="1"/>
+              <circle class="search-image-point" cx="227" cy="133" r="3"/>
+            </g>
+            <rect class="search-text-signal" x="-3" y="-3" width="6" height="6" rx="1"/>
+            <circle class="search-image-signal" cx="0" cy="0" r="3"/>
+            <text class="search-input-label search-word-label" x="27" y="99">Words</text>
+            <text class="search-input-label search-image-label" x="361" y="99">Images</text>
+            <rect class="search-meaning-backdrop" x="162" y="83" width="116" height="24" rx="5"/>
+            <text class="search-meaning-label" x="220" y="99" text-anchor="middle">Shared meaning</text>
+          </svg>
+        </div><div class="visual-bottom"><span>TEXT + IMAGE</span><div class="search-motion-meta"><span>CONCEPTUAL VIEW</span><button id="search-motion-toggle" type="button" aria-label="Pause search animation" aria-pressed="false">Pause</button></div></div></div><div class="project-copy"><span class="project-number">03 / MACHINE LEARNING</span><h3>Search beyond keywords.</h3><p>Find images with a sentence or another image. CLIP embeddings and vector search connect a FastAPI backend to a React interface.</p><div class="tags"><span>CLIP</span><span>ChromaDB</span><span>FastAPI</span></div><div class="project-links"><button class="case-link" data-case="search">Inside the project <span aria-hidden="true">+</span></button><a href="https://github.com/jadhavgaurav/multimodal-search-platform" target="_blank" rel="noopener noreferrer">Source</a></div></div></article>
       </div>
       <a class="more-work" href="https://github.com/jadhavgaurav?tab=repositories" target="_blank" rel="noopener noreferrer"><span>There's more in the workshop.</span><strong>Explore the repositories <span aria-hidden="true">+</span></strong></a>
     </section>

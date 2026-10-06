@@ -17,6 +17,7 @@ Open `http://localhost:4173`. The site is plain HTML, CSS, and JavaScript module
 - `app.js`: project dialogs, contact actions, local time, and canvas rendering.
 - `learning-model.js`: deterministic neural-network training on a synthetic two-moons dataset.
 - `bitling-preview.js`: click-to-load integration with Bitling's real public browser engine, simulated developer events, and visibility-aware pause controls.
+- `search-motion.css`, `search-motion.js`: animated SVG explanation of a shared text/image embedding space, with pause and reduced-motion support.
 - `assets/`: bundled fonts and original Bitling artwork, with font licenses.
 - `404.html`, `robots.txt`, and `sitemap.xml`: public site navigation and indexing.
 
@@ -25,6 +26,8 @@ Open `http://localhost:4173`. The site is plain HTML, CSS, and JavaScript module
 Project descriptions and measurements link to public source and merged changes. Measurements remain qualified to their documented context. No private repository material is included.
 
 The hero renders actual saved training snapshots, predictions, learned weights, and sample activations. It replays a verified small model using a nonlinear time scale; it is an educational illustration, not a generalization benchmark. Pause and replay controls are available. Reduced motion is respected, and painting pauses outside the viewport or when the document is hidden.
+
+The Multimodal Search card uses a conceptual SVG animation: text and image signals enter a shared space and a nearby pair highlights. Its coordinates are illustrative rather than measured CLIP embeddings. The sequence pauses offscreen, when the page is hidden, or via its Pause control; reduced-motion visitors receive the static diagram.
 
 Bitling artwork comes from [the original project](https://github.com/jadhavgaurav/bitling/blob/main/docs/media/hero.png). Space Grotesk, DM Sans, IBM Plex Mono, and Instrument Serif are self-hosted with their SIL Open Font Licenses in `assets/fonts/`.
 
