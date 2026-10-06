@@ -1,0 +1,775 @@
+{
+  "generatedAt": "2026-10-06T15:02:41.101Z",
+  "totals": {
+    "mergedPullRequests": 43,
+    "mergedProjects": 16,
+    "openPullRequests": 31,
+    "openProjects": 22,
+    "projects": 35,
+    "languages": 16
+  },
+  "projects": [
+    {
+      "repo": "makeplane/plane",
+      "merged": [],
+      "open": [
+        {
+          "number": 9700,
+          "title": "fix(auth): default HTTP_USER_AGENT to empty string in save_user_data",
+          "url": "https://github.com/makeplane/plane/pull/9700",
+          "date": "2026-08-27"
+        },
+        {
+          "number": 9685,
+          "title": "fix(security): scope cycle/module lookup by workspace in advance analytics chart",
+          "url": "https://github.com/makeplane/plane/pull/9685",
+          "date": "2026-08-26"
+        },
+        {
+          "number": 9684,
+          "title": "fix(cycles): make transfer_cycle_issues atomic",
+          "url": "https://github.com/makeplane/plane/pull/9684",
+          "date": "2026-08-26"
+        },
+        {
+          "number": 9681,
+          "title": "fix(editor): prevent duplicate tab when clicking links in read-only view",
+          "url": "https://github.com/makeplane/plane/pull/9681",
+          "date": "2026-08-25"
+        }
+      ],
+      "stars": 60437,
+      "language": "TypeScript",
+      "url": "https://github.com/makeplane/plane"
+    },
+    {
+      "repo": "jgm/pandoc",
+      "merged": [
+        {
+          "number": 11877,
+          "title": "ANSI writer: fix missing bar on blockquote's first line",
+          "url": "https://github.com/jgm/pandoc/pull/11877",
+          "date": "2026-09-18"
+        }
+      ],
+      "open": [],
+      "stars": 46616,
+      "language": "Haskell",
+      "url": "https://github.com/jgm/pandoc"
+    },
+    {
+      "repo": "readest/readest",
+      "merged": [
+        {
+          "number": 6270,
+          "title": "fix(reader): preserve style tag attributes in the style transformer",
+          "url": "https://github.com/readest/readest/pull/6270",
+          "date": "2026-09-18"
+        },
+        {
+          "number": 6168,
+          "title": "fix(reader): keep sliders mirrored when a book turns the layout RTL",
+          "url": "https://github.com/readest/readest/pull/6168",
+          "date": "2026-09-16"
+        },
+        {
+          "number": 6116,
+          "title": "fix(sync): repair missing local covers from the file-sync remote",
+          "url": "https://github.com/readest/readest/pull/6116",
+          "date": "2026-09-07"
+        },
+        {
+          "number": 5905,
+          "title": "fix(sync): converge multi-device file sync (#5900)",
+          "url": "https://github.com/readest/readest/pull/5905",
+          "date": "2026-08-27"
+        },
+        {
+          "number": 5878,
+          "title": "fix(library): save the new data location when migrating an empty library",
+          "url": "https://github.com/readest/readest/pull/5878",
+          "date": "2026-08-26"
+        },
+        {
+          "number": 5867,
+          "title": "fix(library): rubber-band the bookshelf at both edges and keep the reader from overscrolling",
+          "url": "https://github.com/readest/readest/pull/5867",
+          "date": "2026-08-25"
+        }
+      ],
+      "open": [],
+      "stars": 24902,
+      "language": "TypeScript",
+      "url": "https://github.com/readest/readest"
+    },
+    {
+      "repo": "ReactiveX/RxSwift",
+      "merged": [],
+      "open": [
+        {
+          "number": 2735,
+          "title": "Synchronize ScanSink's accumulator to fix a data race (fixes #2679)",
+          "url": "https://github.com/ReactiveX/RxSwift/pull/2735",
+          "date": "2026-09-22"
+        }
+      ],
+      "stars": 24632,
+      "language": "Swift",
+      "url": "https://github.com/ReactiveX/RxSwift"
+    },
+    {
+      "repo": "phoenixframework/phoenix",
+      "merged": [
+        {
+          "number": 6848,
+          "title": "Restore NULL parameters on phx.gen.cert's public key algorithm",
+          "url": "https://github.com/phoenixframework/phoenix/pull/6848",
+          "date": "2026-09-25"
+        }
+      ],
+      "open": [],
+      "stars": 23175,
+      "language": "Elixir",
+      "url": "https://github.com/phoenixframework/phoenix"
+    },
+    {
+      "repo": "realm/SwiftLint",
+      "merged": [],
+      "open": [
+        {
+          "number": 6906,
+          "title": "Fix prefer_key_path to catch closures nested in macro expansions",
+          "url": "https://github.com/realm/SwiftLint/pull/6906",
+          "date": "2026-09-10"
+        }
+      ],
+      "stars": 19750,
+      "language": "Swift",
+      "url": "https://github.com/realm/SwiftLint"
+    },
+    {
+      "repo": "rubocop/rubocop",
+      "merged": [],
+      "open": [
+        {
+          "number": 15725,
+          "title": "Remove an orphaned enable when its disable is redundant",
+          "url": "https://github.com/rubocop/rubocop/pull/15725",
+          "date": "2026-09-18"
+        }
+      ],
+      "stars": 12910,
+      "language": "Ruby",
+      "url": "https://github.com/rubocop/rubocop"
+    },
+    {
+      "repo": "JamesNK/Newtonsoft.Json",
+      "merged": [],
+      "open": [
+        {
+          "number": 3134,
+          "title": "Fix TypeNameHandling.All dropping type info for Guid, TimeSpan, Uri, DateTimeOffset",
+          "url": "https://github.com/JamesNK/Newtonsoft.Json/pull/3134",
+          "date": "2026-09-22"
+        }
+      ],
+      "stars": 11312,
+      "language": "C#",
+      "url": "https://github.com/JamesNK/Newtonsoft.Json"
+    },
+    {
+      "repo": "mnfst/llm-gateway",
+      "merged": [
+        {
+          "number": 2841,
+          "title": "fix(routing): show loading state while a fallback reorder saves",
+          "url": "https://github.com/mnfst/llm-gateway/pull/2841",
+          "date": "2026-09-27"
+        },
+        {
+          "number": 2772,
+          "title": "fix: Anthropic server tools get parameters when forwarded to chat-completions providers",
+          "url": "https://github.com/mnfst/llm-gateway/pull/2772",
+          "date": "2026-09-13"
+        },
+        {
+          "number": 2858,
+          "title": "fix: give repeated Responses call ids unique values",
+          "url": "https://github.com/mnfst/llm-gateway/pull/2858",
+          "date": "2026-09-11"
+        },
+        {
+          "number": 2764,
+          "title": "fix: invalidate routing cache after model refresh",
+          "url": "https://github.com/mnfst/llm-gateway/pull/2764",
+          "date": "2026-08-25"
+        },
+        {
+          "number": 2763,
+          "title": "fix: show loading state when switching agents on the overview page",
+          "url": "https://github.com/mnfst/llm-gateway/pull/2763",
+          "date": "2026-08-25"
+        }
+      ],
+      "open": [],
+      "stars": 7556,
+      "language": "TypeScript",
+      "url": "https://github.com/mnfst/llm-gateway"
+    },
+    {
+      "repo": "mockk/mockk",
+      "merged": [
+        {
+          "number": 1558,
+          "title": "Fix coVerify on spyk of a suspend SAM interface leaking Continuation",
+          "url": "https://github.com/mockk/mockk/pull/1558",
+          "date": "2026-09-22"
+        }
+      ],
+      "open": [],
+      "stars": 5761,
+      "language": "Kotlin",
+      "url": "https://github.com/mockk/mockk"
+    },
+    {
+      "repo": "pylint-dev/pylint",
+      "merged": [],
+      "open": [
+        {
+          "number": 11493,
+          "title": "Fix used-before-assignment false positive for names shadowed by a later method",
+          "url": "https://github.com/pylint-dev/pylint/pull/11493",
+          "date": "2026-09-29"
+        }
+      ],
+      "stars": 5730,
+      "language": "Python",
+      "url": "https://github.com/pylint-dev/pylint"
+    },
+    {
+      "repo": "ThrowTheSwitch/Unity",
+      "merged": [],
+      "open": [
+        {
+          "number": 852,
+          "title": "Keep commas in parentheses in test name filters",
+          "url": "https://github.com/ThrowTheSwitch/Unity/pull/852",
+          "date": "2026-09-29"
+        }
+      ],
+      "stars": 5398,
+      "language": "C",
+      "url": "https://github.com/ThrowTheSwitch/Unity"
+    },
+    {
+      "repo": "rrrene/credo",
+      "merged": [
+        {
+          "number": 1317,
+          "title": "Fix NegatedConditionsWithElse false positive for double negation",
+          "url": "https://github.com/rrrene/credo/pull/1317",
+          "date": "2026-09-29"
+        }
+      ],
+      "open": [],
+      "stars": 5225,
+      "language": "Elixir",
+      "url": "https://github.com/rrrene/credo"
+    },
+    {
+      "repo": "capricorn86/happy-dom",
+      "merged": [],
+      "open": [
+        {
+          "number": 2453,
+          "title": "fix: [#1769] Return numbers from HTMLTextAreaElement rows and cols",
+          "url": "https://github.com/capricorn86/happy-dom/pull/2453",
+          "date": "2026-09-29"
+        },
+        {
+          "number": 2452,
+          "title": "fix: [#2077] Handle round brackets inside quoted attribute values after a pseudo selector",
+          "url": "https://github.com/capricorn86/happy-dom/pull/2452",
+          "date": "2026-09-29"
+        }
+      ],
+      "stars": 4691,
+      "language": "TypeScript",
+      "url": "https://github.com/capricorn86/happy-dom"
+    },
+    {
+      "repo": "unionai-oss/pandera",
+      "merged": [],
+      "open": [
+        {
+          "number": 2483,
+          "title": "fix: make DataFrameSchema hashable",
+          "url": "https://github.com/unionai-oss/pandera/pull/2483",
+          "date": "2026-09-10"
+        }
+      ],
+      "stars": 4472,
+      "language": "Python",
+      "url": "https://github.com/unionai-oss/pandera"
+    },
+    {
+      "repo": "ouch-org/ouch",
+      "merged": [],
+      "open": [
+        {
+          "number": 1072,
+          "title": "fix: skip special files instead of failing to compress",
+          "url": "https://github.com/ouch-org/ouch/pull/1072",
+          "date": "2026-09-10"
+        }
+      ],
+      "stars": 3781,
+      "language": "Rust",
+      "url": "https://github.com/ouch-org/ouch"
+    },
+    {
+      "repo": "widelands/widelands",
+      "merged": [
+        {
+          "number": 7064,
+          "title": "Escape pinned note text before rendering as richtext",
+          "url": "https://github.com/widelands/widelands/pull/7064",
+          "date": "2026-09-10"
+        }
+      ],
+      "open": [],
+      "stars": 3078,
+      "language": "C++",
+      "url": "https://github.com/widelands/widelands"
+    },
+    {
+      "repo": "apache/commons-lang",
+      "merged": [],
+      "open": [
+        {
+          "number": 1798,
+          "title": "[LANG-1249] Propagate excludeFieldNames to recursive toString rendering",
+          "url": "https://github.com/apache/commons-lang/pull/1798",
+          "date": "2026-09-22"
+        }
+      ],
+      "stars": 3013,
+      "language": "Java",
+      "url": "https://github.com/apache/commons-lang"
+    },
+    {
+      "repo": "Qalculate/libqalculate",
+      "merged": [],
+      "open": [
+        {
+          "number": 1018,
+          "title": "Require autoconf >= 2.73 to avoid GCC 16 FTBFS (fixes #979)",
+          "url": "https://github.com/Qalculate/libqalculate/pull/1018",
+          "date": "2026-08-27"
+        }
+      ],
+      "stars": 2688,
+      "language": "C++",
+      "url": "https://github.com/Qalculate/libqalculate"
+    },
+    {
+      "repo": "QuantEcon/QuantEcon.py",
+      "merged": [
+        {
+          "number": 964,
+          "title": "MAINT: Code-hygiene quick wins (#882)",
+          "url": "https://github.com/QuantEcon/QuantEcon.py/pull/964",
+          "date": "2026-09-23"
+        }
+      ],
+      "open": [],
+      "stars": 2403,
+      "language": "Python",
+      "url": "https://github.com/QuantEcon/QuantEcon.py"
+    },
+    {
+      "repo": "sheredom/utf8.h",
+      "merged": [
+        {
+          "number": 142,
+          "title": "Add Armenian and Cherokee case mappings",
+          "url": "https://github.com/sheredom/utf8.h/pull/142",
+          "date": "2026-10-01"
+        }
+      ],
+      "open": [],
+      "stars": 1995,
+      "language": "C",
+      "url": "https://github.com/sheredom/utf8.h"
+    },
+    {
+      "repo": "jeremyjh/dialyxir",
+      "merged": [],
+      "open": [
+        {
+          "number": 606,
+          "title": "Fix call_with_opaque formatting on OTP 28+",
+          "url": "https://github.com/jeremyjh/dialyxir/pull/606",
+          "date": "2026-09-29"
+        }
+      ],
+      "stars": 1797,
+      "language": "Elixir",
+      "url": "https://github.com/jeremyjh/dialyxir"
+    },
+    {
+      "repo": "haskell/cabal",
+      "merged": [],
+      "open": [
+        {
+          "number": 12409,
+          "title": "Do not run Haddock for components added to a multi-repl session",
+          "url": "https://github.com/haskell/cabal/pull/12409",
+          "date": "2026-10-05"
+        }
+      ],
+      "stars": 1744,
+      "language": "Haskell",
+      "url": "https://github.com/haskell/cabal"
+    },
+    {
+      "repo": "Exiv2/exiv2",
+      "merged": [
+        {
+          "number": 9450,
+          "title": "Fix incorrect image size for OS/2 1.x / Windows 2.x BMP files",
+          "url": "https://github.com/Exiv2/exiv2/pull/9450",
+          "date": "2026-08-27"
+        }
+      ],
+      "open": [
+        {
+          "number": 9517,
+          "title": "Stop bash_tests and bugfixes from sharing tmp copies of test files",
+          "url": "https://github.com/Exiv2/exiv2/pull/9517",
+          "date": "2026-09-29"
+        },
+        {
+          "number": 9504,
+          "title": "basicio: write through a temp file so a crash can't truncate the original (#9482)",
+          "url": "https://github.com/Exiv2/exiv2/pull/9504",
+          "date": "2026-09-18"
+        },
+        {
+          "number": 9489,
+          "title": "Print nested XMP properties through their own print function",
+          "url": "https://github.com/Exiv2/exiv2/pull/9489",
+          "date": "2026-09-10"
+        },
+        {
+          "number": 9484,
+          "title": "Keep all values of repeatable IPTC datasets on insert",
+          "url": "https://github.com/Exiv2/exiv2/pull/9484",
+          "date": "2026-09-07"
+        }
+      ],
+      "stars": 1166,
+      "language": "C++",
+      "url": "https://github.com/Exiv2/exiv2"
+    },
+    {
+      "repo": "r-lib/testthat",
+      "merged": [],
+      "open": [
+        {
+          "number": 2355,
+          "title": "Fix snapshot cleanup deleting .new files for multi-dot filenames",
+          "url": "https://github.com/r-lib/testthat/pull/2355",
+          "date": "2026-09-18"
+        }
+      ],
+      "stars": 941,
+      "language": "R",
+      "url": "https://github.com/r-lib/testthat"
+    },
+    {
+      "repo": "openeverest/openeverest",
+      "merged": [
+        {
+          "number": 3047,
+          "title": "fix: handle Kubernetes milli-byte suffix in memoryParser",
+          "url": "https://github.com/openeverest/openeverest/pull/3047",
+          "date": "2026-09-16"
+        },
+        {
+          "number": 3052,
+          "title": "fix(ui): hide provider version in database tile",
+          "url": "https://github.com/openeverest/openeverest/pull/3052",
+          "date": "2026-08-26"
+        }
+      ],
+      "open": [
+        {
+          "number": 3140,
+          "title": "fix(cli): delete the InstalledExtension on extension uninstall",
+          "url": "https://github.com/openeverest/openeverest/pull/3140",
+          "date": "2026-09-07"
+        }
+      ],
+      "stars": 939,
+      "language": "TypeScript",
+      "url": "https://github.com/openeverest/openeverest"
+    },
+    {
+      "repo": "ihabunek/twitch-dl",
+      "merged": [],
+      "open": [
+        {
+          "number": 193,
+          "title": "Fall back to best quality when --quality source has no chunked group",
+          "url": "https://github.com/ihabunek/twitch-dl/pull/193",
+          "date": "2026-08-27"
+        }
+      ],
+      "stars": 759,
+      "language": "Python",
+      "url": "https://github.com/ihabunek/twitch-dl"
+    },
+    {
+      "repo": "pylint-dev/astroid",
+      "merged": [],
+      "open": [
+        {
+          "number": 3323,
+          "title": "Infer the values of `yield from` in FunctionDef.infer_yield_result",
+          "url": "https://github.com/pylint-dev/astroid/pull/3323",
+          "date": "2026-09-29"
+        },
+        {
+          "number": 3322,
+          "title": "Infer TypedDict to a single class",
+          "url": "https://github.com/pylint-dev/astroid/pull/3322",
+          "date": "2026-09-29"
+        },
+        {
+          "number": 3321,
+          "title": "Infer a partial of an async generator function as an async generator",
+          "url": "https://github.com/pylint-dev/astroid/pull/3321",
+          "date": "2026-09-29"
+        }
+      ],
+      "stars": 584,
+      "language": "Python",
+      "url": "https://github.com/pylint-dev/astroid"
+    },
+    {
+      "repo": "OpenFn/lightning",
+      "merged": [],
+      "open": [
+        {
+          "number": 5129,
+          "title": "Close the IDE with Cmd/Ctrl+E while the code editor has focus",
+          "url": "https://github.com/OpenFn/lightning/pull/5129",
+          "date": "2026-09-07"
+        }
+      ],
+      "stars": 300,
+      "language": "Elixir",
+      "url": "https://github.com/OpenFn/lightning"
+    },
+    {
+      "repo": "oras-project/oras-go",
+      "merged": [
+        {
+          "number": 1437,
+          "title": "perf(auth): cache the redirect-safe client instead of rebuilding it per send",
+          "url": "https://github.com/oras-project/oras-go/pull/1437",
+          "date": "2026-09-23"
+        },
+        {
+          "number": 1436,
+          "title": "perf(status): avoid allocating a channel on every TryCommit call",
+          "url": "https://github.com/oras-project/oras-go/pull/1436",
+          "date": "2026-09-23"
+        },
+        {
+          "number": 1428,
+          "title": "perf(graph): bound goroutine fan-out in IndexAll",
+          "url": "https://github.com/oras-project/oras-go/pull/1428",
+          "date": "2026-09-18"
+        },
+        {
+          "number": 1418,
+          "title": "perf(content): actually use the pooled 1 MiB copy buffer",
+          "url": "https://github.com/oras-project/oras-go/pull/1418",
+          "date": "2026-09-10"
+        }
+      ],
+      "open": [],
+      "stars": 292,
+      "language": "Go",
+      "url": "https://github.com/oras-project/oras-go"
+    },
+    {
+      "repo": "tarantool/vshard",
+      "merged": [],
+      "open": [
+        {
+          "number": 668,
+          "title": "Encode error objects into json before logging them",
+          "url": "https://github.com/tarantool/vshard/pull/668",
+          "date": "2026-09-07"
+        }
+      ],
+      "stars": 111,
+      "language": "Lua",
+      "url": "https://github.com/tarantool/vshard"
+    },
+    {
+      "repo": "Tollcraft/soroban-budget-assert",
+      "merged": [
+        {
+          "number": 601,
+          "title": "fix: make the developer scripts run on macOS's bash 3.2",
+          "url": "https://github.com/Tollcraft/soroban-budget-assert/pull/601",
+          "date": "2026-09-22"
+        },
+        {
+          "number": 603,
+          "title": "fix: strip the trailing comment from the @measure marker before parsing",
+          "url": "https://github.com/Tollcraft/soroban-budget-assert/pull/603",
+          "date": "2026-09-08"
+        },
+        {
+          "number": 512,
+          "title": "fix: add curl preflight check to cargo-budget-report",
+          "url": "https://github.com/Tollcraft/soroban-budget-assert/pull/512",
+          "date": "2026-08-28"
+        },
+        {
+          "number": 513,
+          "title": "fix: bring hook installer scripts to behavioral parity",
+          "url": "https://github.com/Tollcraft/soroban-budget-assert/pull/513",
+          "date": "2026-08-25"
+        }
+      ],
+      "open": [],
+      "stars": 41,
+      "language": "Rust",
+      "url": "https://github.com/Tollcraft/soroban-budget-assert"
+    },
+    {
+      "repo": "melihbirim/csvql",
+      "merged": [
+        {
+          "number": 199,
+          "title": "perf: high-cardinality GROUP BY sorts a compact array and uses more merge shards",
+          "url": "https://github.com/melihbirim/csvql/pull/199",
+          "date": "2026-09-30"
+        },
+        {
+          "number": 198,
+          "title": "fix: SUM/AVG no longer change with --threads (#185)",
+          "url": "https://github.com/melihbirim/csvql/pull/198",
+          "date": "2026-09-30"
+        },
+        {
+          "number": 178,
+          "title": "feat: add LPAD/RPAD string functions",
+          "url": "https://github.com/melihbirim/csvql/pull/178",
+          "date": "2026-09-23"
+        }
+      ],
+      "open": [],
+      "stars": 30,
+      "language": "Zig",
+      "url": "https://github.com/melihbirim/csvql"
+    },
+    {
+      "repo": "jonassaa/platypusgit",
+      "merged": [
+        {
+          "number": 447,
+          "title": "fix(git): end option parsing before every push and pull value",
+          "url": "https://github.com/jonassaa/platypusgit/pull/447",
+          "date": "2026-09-11"
+        },
+        {
+          "number": 446,
+          "title": "fix(settings): let settings and forge account rows follow UI density",
+          "url": "https://github.com/jonassaa/platypusgit/pull/446",
+          "date": "2026-09-11"
+        },
+        {
+          "number": 424,
+          "title": "fix(diff): say so when an image preview will not decode",
+          "url": "https://github.com/jonassaa/platypusgit/pull/424",
+          "date": "2026-09-07"
+        },
+        {
+          "number": 273,
+          "title": "fix(net): SIGTERM a cancelled op's process group before SIGKILL",
+          "url": "https://github.com/jonassaa/platypusgit/pull/273",
+          "date": "2026-08-31"
+        },
+        {
+          "number": 231,
+          "title": "Add reveal in file manager and open in terminal to context menus",
+          "url": "https://github.com/jonassaa/platypusgit/pull/231",
+          "date": "2026-08-26"
+        },
+        {
+          "number": 228,
+          "title": "fix(git): validate branch names before creating or renaming",
+          "url": "https://github.com/jonassaa/platypusgit/pull/228",
+          "date": "2026-08-26"
+        },
+        {
+          "number": 220,
+          "title": "feat(cli): add subcommand aliases for 7 more screens",
+          "url": "https://github.com/jonassaa/platypusgit/pull/220",
+          "date": "2026-08-25"
+        },
+        {
+          "number": 219,
+          "title": "feat(repo): name the active repository and branch in the window title",
+          "url": "https://github.com/jonassaa/platypusgit/pull/219",
+          "date": "2026-08-25"
+        },
+        {
+          "number": 218,
+          "title": "feat(cli): add pgit --version / -V",
+          "url": "https://github.com/jonassaa/platypusgit/pull/218",
+          "date": "2026-08-25"
+        }
+      ],
+      "open": [],
+      "stars": 18,
+      "language": "TypeScript",
+      "url": "https://github.com/jonassaa/platypusgit"
+    },
+    {
+      "repo": "StellarAgent-AI-Agent-Payment-Rails/Stellar-agentic",
+      "merged": [
+        {
+          "number": 400,
+          "title": "fix(ci): bump GitHub Actions to Node 24 runtime versions",
+          "url": "https://github.com/StellarAgent-AI-Agent-Payment-Rails/Stellar-agentic/pull/400",
+          "date": "2026-10-02"
+        },
+        {
+          "number": 399,
+          "title": "docs: fix README/CONTRIBUTING badges and links pointing at the wrong places",
+          "url": "https://github.com/StellarAgent-AI-Agent-Payment-Rails/Stellar-agentic/pull/399",
+          "date": "2026-10-02"
+        }
+      ],
+      "open": [
+        {
+          "number": 401,
+          "title": "feat(dx): add pre-commit hooks via husky + lint-staged",
+          "url": "https://github.com/StellarAgent-AI-Agent-Payment-Rails/Stellar-agentic/pull/401",
+          "date": "2026-08-25"
+        }
+      ],
+      "stars": 1,
+      "language": "TypeScript",
+      "url": "https://github.com/StellarAgent-AI-Agent-Payment-Rails/Stellar-agentic"
+    }
+  ]
+}

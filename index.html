@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gaurav Jadhav | Full Stack AI Engineer</title>
+  <meta name="description" content="Gaurav Jadhav is a full stack AI engineer in Mumbai. Merged pull requests in Pandoc, Phoenix, Readest and MockK, plus projects he built on his own.">
+  <meta name="theme-color" content="#0d0e0f" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f6f6f5" media="(prefers-color-scheme: light)">
+  <link rel="canonical" href="https://jadhavgaurav.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Gaurav Jadhav">
+  <meta property="og:title" content="Gaurav Jadhav | Full Stack AI Engineer">
+  <meta property="og:description" content="Merged pull requests in Pandoc, Phoenix, Readest and MockK, plus projects built on his own.">
+  <meta property="og:url" content="https://jadhavgaurav.github.io/">
+  <meta property="og:image" content="https://jadhavgaurav.github.io/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preload" href="fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/GeistMono-Variable.woff2" as="font" type="font/woff2" crossorigin>
+
+  <script>
+    document.documentElement.classList.add("js");
+    try {
+      var savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "light" || savedTheme === "dark") {
+        document.documentElement.dataset.theme = savedTheme;
+      }
+    } catch (error) { /* storage can be blocked; the system theme applies */ }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Gaurav Jadhav",
+    "jobTitle": "Full Stack AI Engineer",
+    "url": "https://jadhavgaurav.github.io/",
+    "worksFor": { "@type": "Organization", "name": "Alsonotify" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Mumbai", "addressCountry": "IN" },
+    "sameAs": [
+      "https://github.com/jadhavgaurav",
+      "https://www.linkedin.com/in/gauravjadhav007"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="top-sentinel" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="#top">Gaurav Jadhav</a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="#open-source">Open source</a>
+        <a href="#projects">Projects</a>
+        <a href="#background">Background</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-quiet btn-small" href="#contact">Contact</a>
+        <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Switch theme">
+          <span class="icon icon-sun" style="--icon: url(/assets/icons/sun.svg)" aria-hidden="true"></span>
+          <span class="icon icon-moon" style="--icon: url(/assets/icons/moon.svg)" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 class="hero-title" id="hero-title">
+            <span class="line"><span>Full stack</span></span>
+            <span class="line"><span>AI engineer.</span></span>
+          </h1>
+          <p class="hero-lead">
+            At Alsonotify, a Digibranders brand.
+            <span data-count="mergedPullRequests">43</span> merged pull requests across
+            <span data-count="mergedProjects">16</span> open-source projects,
+            <span data-count="openPullRequests">31</span> more in review.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#open-source">Open-source work</a>
+            <a class="btn btn-quiet" href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <figure class="hero-visual">
+          <div class="field" id="field" aria-hidden="true" aria-busy="true">
+            <svg id="field-svg" viewBox="0 0 640 560" preserveAspectRatio="xMidYMid meet" role="presentation"></svg>
+            <div class="tooltip" id="tooltip" hidden></div>
+          </div>
+          <figcaption class="field-note">
+            Every project I have sent a pull request to. Size follows stars. Filled means merged, outlined means in review.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="open-source" aria-labelledby="oss-title">
+      <div class="container">
+        <h2 class="section-title reveal" id="oss-title">Fixes merged into projects people depend on.</h2>
+        <p class="section-lead reveal">Every row links to the pull request on GitHub. The list rebuilds each day from GitHub's API.</p>
+
+        <dl class="stats reveal" id="stats">
+          <div class="stat"><dt>Merged pull requests</dt><dd data-count="mergedPullRequests">43</dd></div>
+          <div class="stat"><dt>Projects with a merge</dt><dd data-count="mergedProjects">16</dd></div>
+          <div class="stat"><dt>Pull requests in review</dt><dd data-count="openPullRequests">31</dd></div>
+          <div class="stat"><dt>Languages touched</dt><dd data-count="languages">16</dd></div>
+        </dl>
+
+        <div class="toolbar reveal">
+          <div class="filters" role="group" aria-label="Filter projects">
+            <button type="button" class="filter" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="filter" data-filter="merged" aria-pressed="false">Merged</button>
+            <button type="button" class="filter" data-filter="open" aria-pressed="false">In review</button>
+          </div>
+          <p class="toolbar-status" id="ledger-status" role="status"></p>
+        </div>
+
+        <ol class="ledger" id="ledger" aria-live="off">
+          <li class="ledger-skeleton" aria-hidden="true"></li>
+          <li class="ledger-skeleton" aria-hidden="true"></li>
+          <li class="ledger-skeleton" aria-hidden="true"></li>
+        </ol>
+        <noscript>
+          <p class="ledger-message">The open-source record needs JavaScript.
+            <a href="https://github.com/search?q=author%3Ajadhavgaurav+is%3Apr+is%3Amerged+-user%3Ajadhavgaurav&amp;type=pullrequests">Browse it on GitHub</a>.</p>
+        </noscript>
+        <p class="ledger-message" id="ledger-error" hidden>
+          The record could not be loaded.
+          <a href="https://github.com/search?q=author%3Ajadhavgaurav+is%3Apr+is%3Amerged+-user%3Ajadhavgaurav&amp;type=pullrequests">Browse it on GitHub</a>.
+        </p>
+        <button type="button" class="btn btn-quiet more" id="ledger-more" hidden></button>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 class="section-title reveal" id="projects-title">Things I built on my own.</h2>
+
+        <article class="feature reveal">
+          <figure class="feature-media">
+            <img src="assets/bitling-stage.png" width="900" height="420" loading="lazy" decoding="async"
+                 alt="Bitling's desktop stage: a red bug labelled test_webhook_signature is hit by two red beams, beside a rocket captioned shipped main.">
+          </figure>
+          <div class="feature-body">
+            <h3>Bitling</h3>
+            <p>A desktop pet for macOS that reacts to your work. It catches commits, celebrates pushes, shoots down failing tests and notices Claude Code sessions.</p>
+            <p class="meta">macOS 13 and later. Apple Silicon and Intel. Experimental Windows port.</p>
+            <p class="links">
+              <a class="text-link" href="https://jadhavgaurav.github.io/bitling/" rel="noopener">Browser demo<span class="icon" style="--icon: url(/assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a>
+              <a class="text-link" href="https://github.com/jadhavgaurav/bitling" rel="noopener">Source<span class="icon" style="--icon: url(/assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a>
+            </p>
+          </div>
+        </article>
+
+        <div class="work-grid">
+          <article class="work reveal">
+            <h3>Project VICTUS</h3>
+            <p>A voice assistant that answers questions over your documents and uses tools. Every tool call passes a policy engine that can ask for human approval, and each step is traced.</p>
+            <p class="meta">Python, FastAPI, React</p>
+            <a class="text-link" href="https://github.com/jadhavgaurav/PROJECT-VICTUS" rel="noopener">Source<span class="icon" style="--icon: url(/assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a>
+          </article>
+          <article class="work reveal">
+            <h3>GitHub Mirror</h3>
+            <p>Reads a public GitHub footprint and builds an engineering profile: an archetype, five scored dimensions and a deterministic visual seal, scored on the server.</p>
+            <p class="meta">Next.js 16, React 19, TypeScript, Redis</p>
+            <a class="text-link" href="https://github.com/jadhavgaurav/github-mirror" rel="noopener">Source<span class="icon" style="--icon: url(/assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a>
+          </article>
+          <article class="work reveal">
+            <h3>Multimodal Search</h3>
+            <p>Search images with a sentence or with another image. CLIP embeddings are stored in ChromaDB behind a FastAPI service, with a React front end.</p>
+            <p class="meta">Python, FastAPI, ChromaDB, React, Docker</p>
+            <a class="text-link" href="https://github.com/jadhavgaurav/multimodal-search-platform" rel="noopener">Source<span class="icon" style="--icon: url(/assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a>
+          </article>
+          <article class="work reveal">
+            <h3>Vision-X</h3>
+            <p>Real-time face recognition for attendance. YOLOv8 finds faces, sessions are logged to SQLite, and re-identification stops people being logged twice.</p>
+            <p class="meta">Python, YOLOv8 on ONNX, Dear PyGui</p>
+            <a class="text-link" href="https://github.com/jadhavgaurav/Vision-X" rel="noopener">Source<span class="icon" style="--icon: url(/assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a>
+          </article>
+        </div>
+
+        <h3 class="subhead reveal">Machine learning</h3>
+        <dl class="ml reveal">
+          <div>
+            <dt>Phishing website detection</dt>
+            <dd>11,430 pages and 89 raw features, cut to 28 by four selection methods and explained with SHAP and LIME. Built during an internship at Code B Solutions.
+              <a class="text-link" href="https://website-phishing-detection.streamlit.app" rel="noopener">Live app<span class="icon" style="--icon: url(/assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a></dd>
+          </div>
+          <div>
+            <dt>Kidney disease classification</dt>
+            <dd>A CNN that reads CT scans. Experiments are tracked in MLflow, data is versioned with DVC, and an AWS CI/CD pipeline deploys it.
+              <a class="text-link" href="https://github.com/jadhavgaurav/Kidney_disease_classification_cnn" rel="noopener">Source<span class="icon" style="--icon: url(/assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a></dd>
+          </div>
+          <div>
+            <dt>Smart email assistant</dt>
+            <dd>A classifier routes mail to HR or IT, a local Llama 3 model drafts replies, and an escalation agent hands unsure cases to a person.
+              <a class="text-link" href="https://github.com/jadhavgaurav/smart-email-assistant-newel" rel="noopener">Source<span class="icon" style="--icon: url(/assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a></dd>
+          </div>
+          <div>
+            <dt>E-voting with blockchain and face recognition</dt>
+            <dd>The project behind my published paper on transparent voting.
+              <a class="text-link" href="https://github.com/jadhavgaurav/E-Voting-using-Blockchain-and-Face-Recognition" rel="noopener">Source<span class="icon" style="--icon: url(/assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" id="background" aria-labelledby="background-title">
+      <div class="container background">
+        <div class="background-intro">
+          <h2 class="section-title reveal" id="background-title">Systems should say what they did.</h2>
+          <p class="section-lead reveal">It is the thread through my work: SHAP and LIME on a classifier, MLflow and DVC on a CT model, an approval gate on every agent tool call.</p>
+        </div>
+        <ol class="timeline">
+          <li class="reveal">
+            <p class="period">April 2026 to now</p>
+            <h3>Full Stack AI Engineer, Alsonotify</h3>
+            <p>Alsonotify is a Digibranders brand. I build web products and AI features, mostly in TypeScript and Python.</p>
+          </li>
+          <li class="reveal">
+            <p class="period">February to April 2025</p>
+            <h3>Data Science Intern, Code B Solutions</h3>
+            <p>Took a phishing detector from a raw dataset to a deployed Streamlit app with CI and data versioning.</p>
+          </li>
+          <li class="reveal">
+            <p class="period">June 2024 to June 2025</p>
+            <h3>Master in Data Science and Analytics with AI, IT Vedant with IBM</h3>
+            <p>Four IBM courses along the way: Python for Data Science, Data Analysis with Python, Machine Learning with Python and Deep Learning with TensorFlow. Also Databricks Generative AI Fundamentals.</p>
+          </li>
+          <li class="reveal">
+            <p class="period">April 2024</p>
+            <h3>Published in IJREAM</h3>
+            <p>"A Framework to Make Voting System Transparent Using Blockchain Technology", Volume 10, Issue 01.
+              <a class="text-link" href="https://doi.org/10.35291/2454-9150.2024.0261" rel="noopener">DOI<span class="icon" style="--icon: url(/assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a></p>
+          </li>
+          <li class="reveal">
+            <p class="period">2024</p>
+            <h3>B.E. Computer Engineering, University of Mumbai</h3>
+            <p>The final-year project became the paper above.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 class="section-title reveal" id="contact-title">Write to me.</h2>
+        <p class="section-lead reveal">Email is best. I am in Mumbai, India.</p>
+        <a class="contact-email reveal" href="mailto:gaurav.vjadhav01@gmail.com">gaurav.vjadhav01@gmail.com</a>
+        <p class="contact-links reveal">
+          <a class="btn btn-quiet" href="https://github.com/jadhavgaurav" rel="noopener"><span class="icon" style="--icon: url(/assets/icons/github-logo.svg)" aria-hidden="true"></span>GitHub</a>
+          <a class="btn btn-quiet" href="https://www.linkedin.com/in/gauravjadhav007" rel="noopener"><span class="icon" style="--icon: url(/assets/icons/linkedin-logo.svg)" aria-hidden="true"></span>LinkedIn</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Gaurav Jadhav, 2026.</p>
+      <p>Open-source figures refreshed <time id="refreshed" datetime="">daily</time> from GitHub.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

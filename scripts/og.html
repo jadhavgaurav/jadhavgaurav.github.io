@@ -1,0 +1,39 @@
+<!doctype html>
+<!--
+  Template for assets/og.png (1200x630). Not linked from the site.
+  Regenerate with the site served on port 4173:
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars \
+      --window-size=1200,630 --virtual-time-budget=6000 --screenshot=assets/og.png \
+      http://localhost:4173/scripts/og.html
+-->
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <title>Social preview</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    body { width: 1200px; height: 630px; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 24px; padding: 0 64px; }
+    .card-name { font-size: 1.125rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 28px; }
+    .hero-title { font-size: 5rem; }
+    .card-lead { margin-top: 28px; max-width: 30rem; font-size: 1.5rem; line-height: 1.4; color: var(--muted); }
+    .card-lead strong { color: var(--text); font-weight: 500; }
+  </style>
+</head>
+<body>
+  <div>
+    <p class="card-name">Gaurav Jadhav</p>
+    <h1 class="hero-title">
+      <span class="line"><span>Full stack</span></span>
+      <span class="line"><span>AI engineer.</span></span>
+    </h1>
+    <p class="card-lead">Merged pull requests in <strong>Pandoc</strong>, <strong>Phoenix</strong>, <strong>Readest</strong> and <strong>MockK</strong>.</p>
+  </div>
+  <div class="field" id="field"><svg id="field-svg" viewBox="0 0 640 560" role="presentation"></svg><div class="tooltip" hidden></div></div>
+  <script type="module">
+    import { renderField } from "../js/bubbles.js";
+    const record = await (await fetch("../data/oss.json")).json();
+    renderField(document.getElementById("field"), record.projects, () => {});
+  </script>
+</body>
+</html>

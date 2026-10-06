@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jadhavgaurav.github.io/sitemap.xml
