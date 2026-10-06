@@ -3,349 +3,68 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gaurav Jadhav | Full Stack AI Engineer</title>
-  <meta name="description" content="Gaurav Jadhav is a full stack AI engineer in Mumbai. AI products, agents and web apps, plus open-source fixes merged into Pandoc, Phoenix and Readest.">
-  <meta name="theme-color" content="#0d0e0f" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#f6f6f5" media="(prefers-color-scheme: light)">
-  <link rel="canonical" href="https://jadhavgaurav.github.io/">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-
+  <meta name="theme-color" content="#f8f9fb">
+  <meta name="description" content="Gaurav Jadhav builds AI products and the systems around them. Explore selected work in agents, retrieval, product engineering, and creative developer tools.">
+  <meta property="og:title" content="Gaurav Jadhav — AI & Product Engineer">
+  <meta property="og:description" content="Selected products, engineering stories, and a little curiosity.">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Gaurav Jadhav">
-  <meta property="og:title" content="Gaurav Jadhav | Full Stack AI Engineer">
-  <meta property="og:description" content="AI products, agents and web apps, plus open-source fixes merged into Pandoc, Phoenix and Readest.">
   <meta property="og:url" content="https://jadhavgaurav.github.io/">
-  <meta property="og:image" content="https://jadhavgaurav.github.io/assets/og.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <link rel="preload" href="fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/GeistMono-Variable.woff2" as="font" type="font/woff2" crossorigin>
-
-  <script>
-    document.documentElement.classList.add("js");
-    try {
-      var savedTheme = localStorage.getItem("theme");
-      if (savedTheme === "light" || savedTheme === "dark") {
-        document.documentElement.dataset.theme = savedTheme;
-      }
-      if (localStorage.getItem("pet") === "hidden") {
-        document.documentElement.dataset.pet = "hidden";
-      }
-    } catch (error) { /* storage can be blocked; defaults apply */ }
-  </script>
-  <link rel="stylesheet" href="css/styles.css">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Gaurav Jadhav",
-    "jobTitle": "Full Stack AI Engineer",
-    "url": "https://jadhavgaurav.github.io/",
-    "worksFor": { "@type": "Organization", "name": "Alsonotify" },
-    "address": { "@type": "PostalAddress", "addressLocality": "Mumbai", "addressCountry": "IN" },
-    "sameAs": [
-      "https://github.com/jadhavgaurav",
-      "https://www.linkedin.com/in/gauravjadhav007"
-    ]
-  }
-  </script>
+  <link rel="canonical" href="https://jadhavgaurav.github.io/">
+  <title>Gaurav Jadhav — AI & Product Engineer</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231d4fff'/%3E%3Ctext x='9' y='44' font-family='Arial,sans-serif' font-size='39' font-weight='700' fill='white'%3Egj%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="assets/fonts/SpaceGrotesk.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <div id="top-sentinel" aria-hidden="true"></div>
-
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="wordmark" href="#top">Gaurav Jadhav</a>
-      <nav class="primary-nav" aria-label="Primary">
-        <a href="#work">Work</a>
-        <a href="#background">Background</a>
-        <a href="#open-source">Open source</a>
-      </nav>
-      <div class="header-actions">
-        <a class="btn btn-quiet btn-small" href="#contact">Contact</a>
-        <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Switch theme">
-          <span class="icon icon-sun" style="--icon: url(/assets/icons/sun.svg)" aria-hidden="true"></span>
-          <span class="icon icon-moon" style="--icon: url(/assets/icons/moon.svg)" aria-hidden="true"></span>
-        </button>
-      </div>
-    </div>
+  <header class="site-header wrap">
+    <a class="wordmark" href="#top" aria-label="Gaurav Jadhav, home">gj<span>.</span></a>
+    <a class="header-name" href="#top">Gaurav Jadhav<span>AI & product engineer</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#work">Work</a><a href="#practice">Practice</a><a href="#about">About</a><a class="nav-contact" href="#contact">Let's talk<span class="link-dot" aria-hidden="true"></span></a>
+    </nav>
   </header>
-
   <main id="main">
-    <section class="hero" id="top" data-pet="hello" aria-labelledby="hero-title">
-      <div class="container hero-inner">
-        <h1 class="name" id="hero-title" aria-label="Gaurav Jadhav">
-          <span class="name-line" aria-hidden="true">Gaurav</span>
-          <span class="name-line" aria-hidden="true">Jadhav</span>
-        </h1>
-        <div class="hero-foot">
-          <p class="hero-lead">Full stack AI engineer at Alsonotify, a Digibranders brand. I build AI products, agents and web apps.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#work">Selected work</a>
-            <a class="btn btn-quiet" href="#contact">Contact</a>
-          </div>
+    <section class="hero wrap" id="top" aria-labelledby="hero-title">
+      <div class="hero-topline"><span class="eyebrow">Independent thinking. Useful things.</span><span class="location">Based in Mumbai, India <span aria-hidden="true">·</span> <time id="mumbai-time">IST</time></span></div>
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <h1 id="hero-title">AI, built for<br>the <em>real world.</em></h1>
+          <p class="hero-intro">I'm Gaurav. I turn complex ideas into products people can use—and build the systems that make them work.</p>
+          <div class="hero-actions"><a class="button button-dark" href="#work">Explore selected work <span class="button-mark" aria-hidden="true">+</span></a><a class="text-link" href="https://github.com/jadhavgaurav" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+          <p class="current-role"><span class="tiny-square" aria-hidden="true"></span>Currently building at <strong>Alsonotify / Digibranders</strong></p>
         </div>
+        <figure class="learning-piece" aria-labelledby="learning-title">
+          <div class="piece-header"><span class="eyebrow" id="learning-title">Learning in motion</span><span class="piece-index">EXPERIMENT / 001</span></div>
+          <div class="canvas-holder"><canvas id="learning-canvas" width="720" height="620" role="img" aria-label="A neural network learning to separate two curved groups of points. The boundary and connections reflect actual model predictions and weights.">A small neural network learns to distinguish two groups of points.</canvas></div>
+          <div class="piece-footer"><div><span class="learning-status" id="learning-status">A small network, learning.</span><span class="piece-note">Actual training · synthetic data.</span></div><div class="piece-controls"><button class="experiment-control experiment-replay" id="learning-replay" aria-label="Replay the training run">Replay</button><button class="experiment-control" id="learning-toggle" aria-label="Pause learning animation">Pause <span aria-hidden="true">Ⅱ</span></button></div></div>
+          <div class="training-progress" aria-hidden="true"><span id="training-progress"></span></div>
+        </figure>
       </div>
+      <div class="hero-bottom"><span>Retrieval & agents</span><span>Full-stack products</span><span>Systems that hold up</span><a href="#work" class="scroll-note">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a></div>
     </section>
-
-    <section class="section" id="work" data-pet="debug" aria-labelledby="work-title">
-      <div class="container">
-        <h2 class="section-title reveal" id="work-title">Things I built on my own.</h2>
-
-        <div class="stack">
-          <article class="plate" style="--i: 0">
-            <div class="plate-text">
-              <h3>Bitling</h3>
-              <p class="plate-lead">A desktop pet for macOS that reacts to your work. It catches commits, celebrates pushes, shoots down failing tests and notices Claude Code sessions. It is also the pet on this page.</p>
-              <p class="meta">macOS 13 and later. Apple Silicon and Intel. Experimental Windows port.</p>
-              <p class="links">
-                <a class="text-link" href="https://jadhavgaurav.github.io/bitling/" rel="noopener">Browser demo<span class="icon" style="--icon: url(/assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a>
-                <a class="text-link" href="https://github.com/jadhavgaurav/bitling" rel="noopener">Source<span class="icon" style="--icon: url(/assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a>
-              </p>
-            </div>
-            <figure class="plate-visual frame">
-              <img src="assets/bitling-stage.png" width="900" height="420" loading="lazy" decoding="async"
-                   alt="Bitling's desktop stage: a red bug labelled test_webhook_signature is hit by two red beams, beside a rocket captioned shipped main.">
-            </figure>
-          </article>
-
-          <article class="plate" style="--i: 1">
-            <div class="plate-text">
-              <h3>Project VICTUS</h3>
-              <p class="plate-lead">A voice assistant that answers questions over your documents and calls tools. Every tool call goes through a policy engine: low and medium risk run, high risk waits for a human, anything else is denied. Each step is traced.</p>
-              <p class="meta">Python, FastAPI, React</p>
-              <p class="links"><a class="text-link" href="https://github.com/jadhavgaurav/PROJECT-VICTUS" rel="noopener">Source<span class="icon" style="--icon: url(/assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a></p>
-            </div>
-            <figure class="plate-visual code">
-              <figcaption><span>backend/src/policy/engine.py</span><span>excerpt</span></figcaption>
-              <pre tabindex="0"><code>class PolicyDecision(str, Enum):
-    ALLOW = "allow"
-    DENY = "deny"
-    REQUIRE_APPROVAL = "require_approval"
-
-<span class="c">...</span>
-        <span class="c"># ENFORCE mode logic</span>
-        if risk_level == RiskLevel.LOW or risk_level == RiskLevel.MEDIUM:
-            return PolicyDecision.ALLOW
-
-<mark class="hl">        if risk_level == RiskLevel.HIGH:
-            # High risk requires approval
-            return PolicyDecision.REQUIRE_APPROVAL</mark>
-        <span class="c"># Default strict fallback</span>
-        return PolicyDecision.DENY</code></pre>
-            </figure>
-          </article>
-
-          <article class="plate" style="--i: 2">
-            <div class="plate-text">
-              <h3>GitHub Mirror</h3>
-              <p class="plate-lead">Builds an engineering profile from a public GitHub footprint: an archetype, five scored dimensions and a visual seal. Scoring is deterministic and runs on the server, so the same footprint gives the same seal.</p>
-              <p class="meta">Next.js 16, React 19, TypeScript, Redis</p>
-              <p class="links"><a class="text-link" href="https://github.com/jadhavgaurav/github-mirror" rel="noopener">Source<span class="icon" style="--icon: url(/assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a></p>
-            </div>
-            <figure class="plate-visual code">
-              <figcaption><span>lib/engine/gitdna.ts</span><span>excerpt</span></figcaption>
-              <pre tabindex="0"><code><span class="c">// Simple deterministic hash for strings</span>
-export function hashString(str: string): number {
-  let hash = 0x811c9dc5;
-  for (let i = 0; i &lt; str.length; i++) {
-    hash ^= str.charCodeAt(i);
-<mark class="hl">    hash = Math.imul(hash, 0x01000193);</mark>  }
-  return hash &gt;&gt;&gt; 0;
-}</code></pre>
-            </figure>
-          </article>
-
-          <article class="plate" style="--i: 3">
-            <div class="plate-text">
-              <h3>Multimodal Search</h3>
-              <p class="plate-lead">Search images with a sentence or with another image. CLIP turns both into vectors, ChromaDB finds the nearest ones, and a FastAPI service wraps it with a React front end.</p>
-              <p class="meta">Python, FastAPI, ChromaDB, React, Docker</p>
-              <p class="links"><a class="text-link" href="https://github.com/jadhavgaurav/multimodal-search-platform" rel="noopener">Source<span class="icon" style="--icon: url(/assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a></p>
-            </div>
-            <figure class="plate-visual code">
-              <figcaption><span>backend/app/api/routes.py</span><span>excerpt</span></figcaption>
-              <pre tabindex="0"><code>@router.post("/search/text", response_model=SearchResponse)
-async def search_text(request: TextSearchRequest):
-    try:
-        start_time = time.time()
-<mark class="hl">        embedding = ml_service.embed_text(request.query)
-
-        results = vector_store.query(embedding, top_k=settings.TOP_K)</mark>
-        <span class="c"># Parse results from ChromaDB format</span></code></pre>
-            </figure>
-          </article>
-
-          <article class="plate" style="--i: 4">
-            <div class="plate-text">
-              <h3>Vision-X</h3>
-              <p class="plate-lead">Real-time face recognition for attendance. A 10 second embedding cache matches someone who steps out of frame and comes back to their old session, so they are not logged twice.</p>
-              <p class="meta">Python, YOLOv8 on ONNX, SQLite, Dear PyGui</p>
-              <p class="links"><a class="text-link" href="https://github.com/jadhavgaurav/Vision-X" rel="noopener">Source<span class="icon" style="--icon: url(/assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a></p>
-            </div>
-            <figure class="plate-visual code">
-              <figcaption><span>visionxApp.py</span><span>excerpt</span></figcaption>
-              <pre tabindex="0"><code>for re_id_name, data in list(re_id_cache.items()):
-    dist = np.linalg.norm(embedding - data['embedding'])
-<mark class="hl">    if dist &lt; RE_ID_THRESHOLD and dist &lt; best_match_dist:</mark>        best_match_dist = dist
-        best_match_name = re_id_name
-
-if best_match_name:
-    name = best_match_name
-    if name in re_id_cache:
-        del re_id_cache[name]</code></pre>
-            </figure>
-          </article>
-        </div>
-
-        <h3 class="subhead reveal">Machine learning</h3>
-        <dl class="ml reveal">
-          <div>
-            <dt>Phishing website detection</dt>
-            <dd>11,430 pages and 89 raw features, cut to 28 by four selection methods and explained with SHAP and LIME. Built during an internship at Code B Solutions.
-              <a class="text-link" href="https://github.com/jadhavgaurav/CodeB_Internship_Project" rel="noopener">Source<span class="icon" style="--icon: url(/assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a></dd>
-          </div>
-          <div>
-            <dt>Kidney disease classification</dt>
-            <dd>A CNN that reads CT scans. Experiments are tracked in MLflow, data is versioned with DVC, and an AWS CI/CD pipeline deploys it.
-              <a class="text-link" href="https://github.com/jadhavgaurav/Kidney_disease_classification_cnn" rel="noopener">Source<span class="icon" style="--icon: url(/assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a></dd>
-          </div>
-          <div>
-            <dt>Smart email assistant</dt>
-            <dd>A classifier routes mail to HR or IT, a local Llama 3 model drafts replies, and an escalation agent hands unsure cases to a person.
-              <a class="text-link" href="https://github.com/jadhavgaurav/smart-email-assistant-newel" rel="noopener">Source<span class="icon" style="--icon: url(/assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a></dd>
-          </div>
-          <div>
-            <dt>E-voting with blockchain and face recognition</dt>
-            <dd>The project behind my published paper on transparent voting.
-              <a class="text-link" href="https://github.com/jadhavgaurav/E-Voting-using-Blockchain-and-Face-Recognition" rel="noopener">Source<span class="icon" style="--icon: url(/assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a></dd>
-          </div>
-        </dl>
+    <section class="work-section wrap" id="work" aria-labelledby="work-title">
+      <div class="section-heading"><div><span class="section-index">01 / SELECTED WORK</span><h2 id="work-title">Ideas become <em>things.</em></h2></div><p>Different problems. The same instinct:<br>understand it, build it, make it useful.</p></div>
+      <article class="project project-victus">
+        <div class="project-visual victus-visual" aria-label="VICTUS conceptual tool execution flow"><div class="visual-top"><span>VICTUS</span><span>AGENT SYSTEM</span></div><div class="agent-flow"><span class="flow-node">A request</span><span class="flow-connector"></span><span class="flow-node focus-node">Context & tools</span><span class="flow-connector"></span><span class="flow-node">Policy check</span><span class="flow-connector"></span><span class="flow-node">An inspectable action</span></div><div class="visual-bottom"><span>RETRIEVE</span><span>DECIDE</span><span>TRACE</span></div></div>
+        <div class="project-copy"><span class="project-number">01 / AI SYSTEMS</span><h3>VICTUS</h3><p class="project-lede">An assistant with tools.<br>And a sense of boundaries.</p><p>Document-aware AI orchestration with tool policies, approval controls, and execution traces. The interesting part is what happens between a request and an action.</p><div class="tags"><span>Agents</span><span>Retrieval</span><span>Tool policies</span></div><div class="project-links"><button class="case-link" data-case="victus">Inside the project <span aria-hidden="true">+</span></button><a href="https://github.com/jadhavgaurav/victus-backend" target="_blank" rel="noopener noreferrer">Source</a></div></div>
+      </article>
+      <div class="project-grid">
+        <article class="project project-inneed"><div class="project-visual rental-visual" aria-label="INNEED rental lifecycle diagram"><div class="visual-top"><span>INNEED</span><span>RENTAL MARKETPLACE</span></div><div class="rental-word">Own less.<br><em>Do more.</em></div><div class="rental-flow"><span>Discover</span><span>Rent</span><span>Return</span></div></div><div class="project-copy"><span class="project-number">02 / FULL-STACK PRODUCT</span><h3>INNEED</h3><p>A rental marketplace built around the whole journey: discovery, vendor onboarding, checkout, payment verification, disputes, and administration.</p><div class="tags"><span>Marketplace</span><span>Payments</span><span>Workflows</span></div><div class="project-links"><button class="case-link" data-case="inneed">Inside the project <span aria-hidden="true">+</span></button><a href="https://github.com/jadhavgaurav/inneed" target="_blank" rel="noopener noreferrer">Source</a></div></div></article>
+        <article class="project project-search"><div class="project-visual search-visual" aria-label="Multimodal search: text and images connect through an embedding space"><div class="visual-top"><span>MULTIMODAL SEARCH</span><span>AI APPLICATION</span></div><div class="embedding-diagram"><span class="embedding-input">Words</span><div class="embedding-space"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><b>Shared meaning</b></div><span class="embedding-input">Images</span></div><div class="visual-bottom"><span>TEXT + IMAGE</span><span>ONE SEARCH SPACE</span></div></div><div class="project-copy"><span class="project-number">03 / MACHINE LEARNING</span><h3>Search beyond keywords.</h3><p>Find images with a sentence or another image. CLIP embeddings and vector search connect a FastAPI backend to a React interface.</p><div class="tags"><span>CLIP</span><span>ChromaDB</span><span>FastAPI</span></div><div class="project-links"><button class="case-link" data-case="search">Inside the project <span aria-hidden="true">+</span></button><a href="https://github.com/jadhavgaurav/multimodal-search-platform" target="_blank" rel="noopener noreferrer">Source</a></div></div></article>
       </div>
+      <a class="more-work" href="https://github.com/jadhavgaurav?tab=repositories" target="_blank" rel="noopener noreferrer"><span>There's more in the workshop.</span><strong>Explore the repositories <span aria-hidden="true">+</span></strong></a>
     </section>
-
-    <section class="section" id="background" data-pet="commit" aria-labelledby="background-title">
-      <div class="container background">
-        <div class="background-intro">
-          <h2 class="section-title reveal" id="background-title">Systems should say what they did.</h2>
-          <p class="section-lead reveal">It is the thread through my work: SHAP and LIME on a classifier, MLflow and DVC on a CT model, an approval gate on every agent tool call.</p>
-        </div>
-        <ol class="timeline">
-          <li class="reveal">
-            <p class="period">April 2026 to now</p>
-            <h3>Full Stack AI Engineer, Alsonotify</h3>
-            <p>Alsonotify is a Digibranders brand. I build web products and AI features, mostly in TypeScript and Python.</p>
-          </li>
-          <li class="reveal">
-            <p class="period">February to April 2025</p>
-            <h3>Data Science Intern, Code B Solutions</h3>
-            <p>Took a phishing detector from a raw dataset to a deployed Streamlit app with CI and data versioning.</p>
-          </li>
-          <li class="reveal">
-            <p class="period">June 2024 to June 2025</p>
-            <h3>Master in Data Science and Analytics with AI, IT Vedant with IBM</h3>
-            <p>Four IBM courses along the way: Python for Data Science, Data Analysis with Python, Machine Learning with Python and Deep Learning with TensorFlow. Also Databricks Generative AI Fundamentals.</p>
-          </li>
-          <li class="reveal">
-            <p class="period">April 2024</p>
-            <h3>Published in IJREAM</h3>
-            <p>"A Framework to Make Voting System Transparent Using Blockchain Technology", Volume 10, Issue 01.
-              <a class="text-link" href="https://doi.org/10.35291/2454-9150.2024.0261" rel="noopener">DOI<span class="icon" style="--icon: url(/assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a></p>
-          </li>
-          <li class="reveal">
-            <p class="period">2024</p>
-            <h3>B.E. Computer Engineering, University of Mumbai</h3>
-            <p>The final-year project became the paper above.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="section" id="open-source" data-pet="passed" aria-labelledby="oss-title">
-      <div class="container">
-        <div class="oss-head">
-          <div class="oss-intro">
-            <h2 class="section-title reveal" id="oss-title">Fixes merged into projects people depend on.</h2>
-            <p class="section-lead reveal">Open source runs alongside my main work. Every row links to the pull request on GitHub, and the list rebuilds each day.</p>
-            <dl class="stats reveal" id="stats">
-              <div class="stat"><dt>Merged pull requests</dt><dd data-count="mergedPullRequests">43</dd></div>
-              <div class="stat"><dt>Projects with a merge</dt><dd data-count="mergedProjects">16</dd></div>
-              <div class="stat"><dt>Pull requests in review</dt><dd data-count="openPullRequests">31</dd></div>
-              <div class="stat"><dt>Languages touched</dt><dd data-count="languages">16</dd></div>
-            </dl>
-          </div>
-
-          <figure class="oss-visual">
-            <div class="field" id="field" aria-hidden="true" aria-busy="true">
-              <svg id="field-svg" viewBox="0 0 640 560" preserveAspectRatio="xMidYMid meet" role="presentation"></svg>
-              <div class="tooltip" id="tooltip" hidden></div>
-            </div>
-            <figcaption class="field-note">
-              Every project I have sent a pull request to. Size follows stars. Filled means merged, outlined means in review.
-            </figcaption>
-          </figure>
-        </div>
-
-        <div class="toolbar reveal">
-          <div class="filters" role="group" aria-label="Filter projects">
-            <button type="button" class="filter" data-filter="all" aria-pressed="true">All</button>
-            <button type="button" class="filter" data-filter="merged" aria-pressed="false">Merged</button>
-            <button type="button" class="filter" data-filter="open" aria-pressed="false">In review</button>
-          </div>
-          <p class="toolbar-status" id="ledger-status" role="status"></p>
-        </div>
-
-        <ol class="ledger" id="ledger" aria-live="off">
-          <li class="ledger-skeleton" aria-hidden="true"></li>
-          <li class="ledger-skeleton" aria-hidden="true"></li>
-          <li class="ledger-skeleton" aria-hidden="true"></li>
-        </ol>
-        <noscript>
-          <p class="ledger-message">The open-source record needs JavaScript.
-            <a href="https://github.com/search?q=author%3Ajadhavgaurav+is%3Apr+is%3Amerged+-user%3Ajadhavgaurav&amp;type=pullrequests">Browse it on GitHub</a>.</p>
-        </noscript>
-        <p class="ledger-message" id="ledger-error" hidden>
-          The record could not be loaded.
-          <a href="https://github.com/search?q=author%3Ajadhavgaurav+is%3Apr+is%3Amerged+-user%3Ajadhavgaurav&amp;type=pullrequests">Browse it on GitHub</a>.
-        </p>
-        <button type="button" class="btn btn-quiet more" id="ledger-more" hidden></button>
-      </div>
-    </section>
-
-    <section class="section contact" id="contact" data-pet="ask" aria-labelledby="contact-title">
-      <div class="container">
-        <h2 class="section-title reveal" id="contact-title">Write to me.</h2>
-        <p class="section-lead reveal">Email is best. I am in Mumbai, India.</p>
-        <a class="contact-email reveal" href="mailto:gaurav.vjadhav01@gmail.com">gaurav.vjadhav01@gmail.com</a>
-        <p class="contact-links reveal">
-          <a class="btn btn-quiet" href="https://github.com/jadhavgaurav" rel="noopener"><span class="icon" style="--icon: url(/assets/icons/github-logo.svg)" aria-hidden="true"></span>GitHub</a>
-          <a class="btn btn-quiet" href="https://www.linkedin.com/in/gauravjadhav007" rel="noopener"><span class="icon" style="--icon: url(/assets/icons/linkedin-logo.svg)" aria-hidden="true"></span>LinkedIn</a>
-        </p>
-      </div>
-    </section>
+    <section class="practice-section" id="practice" aria-labelledby="practice-title"><div class="wrap"><div class="section-heading"><div><span class="section-index">02 / ENGINEERING IN PRACTICE</span><h2 id="practice-title">The work behind<br><em>the working product.</em></h2></div><p>Some of the most valuable changes<br>never become a feature announcement.</p></div><div class="practice-list">
+      <article class="practice-item"><div class="practice-label"><span class="eyebrow">OYECHATS / AI ENGINEERING</span><h3>Better answers start<br>before the answer.</h3></div><div class="practice-body"><p>I traced a relevance gate that was rejecting useful knowledge-base content, consolidated duplicated RAG pipelines, and moved qualification work onto a durable queue.</p><div class="result"><strong aria-label="15,233 down to 8,120">15,233 <span aria-hidden="true">→</span> 8,120</strong><span>tokens in one assembled prompt,<br>as documented in the remediation PR</span></div><div class="inline-links"><a href="https://github.com/digibranders/oye-chats-platform/pull/450" target="_blank" rel="noopener noreferrer">Retrieval diagnosis</a><a href="https://github.com/digibranders/oye-chats-platform/pull/455" target="_blank" rel="noopener noreferrer">Prompt & durability work</a></div></div></article>
+      <article class="practice-item"><div class="practice-label"><span class="eyebrow">CLEANSTART / PRODUCT ENGINEERING</span><h3>Fewer requests.<br>Correct timing.</h3></div><div class="practice-body"><p>I batched CMS relationship lookups and corrected cache invalidation that could happen before a database transaction committed.</p><div class="result"><strong aria-label="Approximately 75 down to 2">~75 <span aria-hidden="true">→</span> 2</strong><span>relationship requests for the<br>documented 25-row list view</span></div><div class="inline-links"><a href="https://github.com/digibranders/cleanstart-web/pull/279" target="_blank" rel="noopener noreferrer">CMS performance</a><a href="https://github.com/digibranders/cleanstart-web/pull/276" target="_blank" rel="noopener noreferrer">Cache correctness</a></div></div></article>
+    </div><p class="practice-footnote">Professional contributions at Alsonotify, a Digibranders brand. Linked changes describe my contributions within team products.</p></div></section>
+    <section class="curiosity-section wrap" id="curiosity" aria-labelledby="curiosity-title"><div class="section-heading"><div><span class="section-index">03 / ROOM FOR CURIOSITY</span><h2 id="curiosity-title">A little less serious.<br><em>Just as considered.</em></h2></div><p>Useful can have a personality.</p></div><div class="curiosity-grid"><article class="curiosity-card bitling-card"><div><span class="eyebrow">DEVELOPER TOOLS</span><h3>Bitling</h3><p>A desktop companion that turns commits, tests, deploys, and Claude Code sessions into small moments of character. Built primarily for macOS.</p><a class="text-link" href="https://jadhavgaurav.github.io/bitling/" target="_blank" rel="noopener noreferrer">Play with the browser demo</a></div><img class="bitling-art" src="assets/bitling-hero.png" alt="Bitling, a cheerful little desktop robot, saying my circuits tingle" width="600" height="600" loading="lazy"></article><article class="curiosity-card"><span class="eyebrow">CREATIVE ENGINEERING</span><h3>GitHub Mirror</h3><p>A different way to explore a GitHub footprint, with deterministic visual signatures built from repository and activity data.</p><a class="text-link" href="https://github.com/jadhavgaurav/github-mirror" target="_blank" rel="noopener noreferrer">Explore the source</a></article></div></section>
+    <section class="about-section wrap" id="about" aria-labelledby="about-title"><div class="about-title"><span class="section-index">04 / A BIT ABOUT ME</span><h2 id="about-title">An engineer.<br>A builder.<br><em>Still curious.</em></h2></div><div class="about-copy"><p class="large-copy">I like the space between a promising idea and a product someone can actually rely on.</p><p>My background is in computer engineering and data science. Today, I work across retrieval, agents, APIs, and interfaces at Alsonotify / Digibranders in Mumbai.</p><p>I'll happily get into model behavior or a stubborn cache bug. I also believe a small, playful interaction can be worth building well.</p><div class="toolkit"><h3>My working toolkit</h3><p>Python · TypeScript · React · Next.js · FastAPI · Node.js · PostgreSQL · Redis · Docker · AWS</p></div><details class="background"><summary>Education & earlier work <span aria-hidden="true">+</span></summary><div><p><strong>B.E. Computer Engineering</strong><br>University of Mumbai, 2024</p><p><strong>Data Science & Analytics with AI</strong><br>IT Vedant with IBM, 2024–2025</p><p><strong>Data Science Intern</strong><br>Code B Solutions, February–April 2025</p><a href="https://ijream.org/papers/IJREAMV10SSJ2411.pdf" target="_blank" rel="noopener noreferrer">Published research on blockchain voting systems</a></div></details></div></section>
+    <section class="oss-section wrap" id="open-source" aria-labelledby="oss-title"><span class="section-index">ALONG THE WAY</span><div class="oss-layout"><h2 id="oss-title">Small fixes.<br>Shared upstream.</h2><div class="oss-links"><a href="https://github.com/mnfst/llm-gateway/pull/2772" target="_blank" rel="noopener noreferrer"><strong>llm-gateway</strong><span>Preserving Anthropic server-tool parameters.</span><span class="oss-plus" aria-hidden="true">+</span></a><a href="https://github.com/readest/readest/pull/5905" target="_blank" rel="noopener noreferrer"><strong>Readest</strong><span>Making multi-device file sync converge.</span><span class="oss-plus" aria-hidden="true">+</span></a><a href="https://github.com/jgm/pandoc/pull/11877" target="_blank" rel="noopener noreferrer"><strong>Pandoc</strong><span>Restoring a missing blockquote bar in ANSI output.</span><span class="oss-plus" aria-hidden="true">+</span></a></div></div></section>
+    <footer class="contact-section" id="contact"><div class="wrap"><div class="contact-topline"><span class="section-index">HAVE SOMETHING IN MIND?</span><span>MUMBAI, INDIA · OPEN TO CONVERSATIONS</span></div><h2>Let's make<br><em>something useful.</em></h2><div class="contact-actions"><a class="button button-white" href="mailto:gaurav.vjadhav01@gmail.com">Say hello <span class="button-mark" aria-hidden="true">+</span></a><button class="copy-email" id="copy-email">Copy email <span aria-hidden="true">⧉</span></button><span class="copy-status" id="copy-status" role="status" aria-live="polite"></span></div><div class="footer-bottom"><span>© <span id="year">2026</span> Gaurav Jadhav</span><div><a href="https://github.com/jadhavgaurav" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/gauravjadhav007" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="#top">Back to top</a></div><span>Thoughtfully built. Still evolving.</span></div></div></footer>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>Set in Geist and Geist Mono. Plain HTML, CSS and JavaScript on GitHub Pages. The pet is Bitling, from my project of the same name.</p>
-      <p class="footer-meta">
-        <span>Open-source figures refreshed <time id="refreshed" datetime="">daily</time> from GitHub.</span>
-        <button type="button" class="link-button" id="pet-toggle" aria-pressed="false">Hide Bitling</button>
-      </p>
-    </div>
-  </footer>
-
-  <aside class="pet" id="pet" aria-label="Bitling, the desktop pet">
-    <p class="pet-bubble" id="pet-bubble" aria-hidden="true"></p>
-    <button class="pet-body" id="pet-body" type="button" aria-label="Bitling, the pet. Press for another line.">
-      <img id="pet-img" src="assets/pet/hello.webp" width="260" height="300" alt="" decoding="async">
-    </button>
-  </aside>
-
-  <script type="module" src="js/main.js"></script>
+  <dialog class="case-dialog" id="case-dialog" aria-labelledby="case-title"><div class="dialog-shell"><button class="dialog-close" id="case-close" aria-label="Close project details">Close <span aria-hidden="true">×</span></button><div id="case-content"></div></div></dialog>
 </body>
 </html>
