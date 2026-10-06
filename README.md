@@ -1,4 +1,4 @@
-# Gaurav Jadhav — portfolio
+# Gaurav Jadhav: portfolio
 
 Source of [jadhavgaurav.github.io](https://jadhavgaurav.github.io/), a portfolio of AI products, professional engineering contributions, and creative developer tools.
 
@@ -12,13 +12,13 @@ Open `http://localhost:4173`. The site is plain HTML, CSS, and JavaScript module
 
 ## Files
 
-- `index.html` — introduction, selected projects, professional contributions, background, open source, and contact.
-- `styles.css` — typography, responsive layout, and motion.
-- `app.js` — project dialogs, contact actions, local time, and canvas rendering.
-- `learning-model.js` — deterministic neural-network training on a synthetic two-moons dataset.
-- `bitling-preview.js` — click-to-load integration with Bitling's real public browser engine, simulated developer events, and visibility-aware pause controls.
-- `assets/` — bundled fonts and original Bitling artwork, with font licenses.
-- `404.html`, `robots.txt`, and `sitemap.xml` — public site navigation and indexing.
+- `index.html`: introduction, selected projects, professional contributions, background, open source, and contact.
+- `styles.css`: typography, responsive layout, and motion.
+- `app.js`: project dialogs, contact actions, local time, and canvas rendering.
+- `learning-model.js`: deterministic neural-network training on a synthetic two-moons dataset.
+- `bitling-preview.js`: click-to-load integration with Bitling's real public browser engine, simulated developer events, and visibility-aware pause controls.
+- `assets/`: bundled fonts and original Bitling artwork, with font licenses.
+- `404.html`, `robots.txt`, and `sitemap.xml`: public site navigation and indexing.
 
 ## Content and animation
 
