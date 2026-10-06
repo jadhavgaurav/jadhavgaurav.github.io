@@ -1,7 +1,10 @@
 import { renderField } from "./bubbles.js";
 import { createLedger } from "./ledger.js";
+import { initName } from "./name.js";
+import { initPet } from "./pet.js";
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const finePointer = window.matchMedia("(pointer: fine)").matches;
 const root = document.documentElement;
 
 /* Theme: the inline script in <head> applied any saved choice; this wires the toggle. */
@@ -149,6 +152,8 @@ async function initOpenSourceRecord() {
 
 initThemeToggle();
 initHeaderRule();
+initName(document.getElementById("hero-title"), { prefersReducedMotion, finePointer });
+initPet({ prefersReducedMotion });
 initReveal();
 initFieldEntrance();
 initOpenSourceRecord();

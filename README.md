@@ -10,7 +10,8 @@ Plain HTML, CSS and ES modules. No build step and no dependencies, so GitHub Pag
 | --- | --- |
 | `index.html` | The page and its copy |
 | `css/styles.css` | Tokens for light and dark, layout, motion |
-| `js/` | Theme toggle, reveal on scroll, the star-scaled bubble field and the project list |
+| `js/` | Theme toggle, reveal on scroll, the cursor-reactive name (`name.js`), the pet (`pet.js`), the star-scaled bubble field and the project list |
+| `assets/pet/` | Poses of Bitling, cropped from the art in [jadhavgaurav/bitling](https://github.com/jadhavgaurav/bitling) (MIT) |
 | `data/oss.json` | Every open-source pull request, grouped by project. Generated, do not edit by hand |
 | `scripts/fetch-oss.mjs` | Builds `data/oss.json` from GitHub's public API |
 | `.github/workflows/refresh-data.yml` | Runs the script daily and commits the result when it changed |

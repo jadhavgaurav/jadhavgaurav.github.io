@@ -13,22 +13,17 @@
   <title>Social preview</title>
   <link rel="stylesheet" href="../css/styles.css">
   <style>
-    body { width: 1200px; height: 630px; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 48px; padding: 0 64px; }
-    .card-name { font-size: 1.125rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 28px; }
-    .hero-title { font-size: 5rem; }
-    .card-lead { margin-top: 28px; max-width: 30rem; font-size: 1.5rem; line-height: 1.4; color: var(--muted); }
-    .shot:hover { transform: none; }
+    body { width: 1200px; height: 630px; overflow: hidden; display: grid; grid-template-columns: 1fr 340px; align-items: end; gap: 40px; padding: 64px; }
+    .name { font-size: 9.25rem; }
+    .card-lead { margin-top: 36px; font-size: 1.625rem; line-height: 1.35; color: var(--muted); max-width: 32rem; }
+    .card-pet { width: 340px; height: auto; }
   </style>
 </head>
 <body>
   <div>
-    <p class="card-name">Gaurav Jadhav</p>
-    <h1 class="hero-title">
-      <span class="line"><span>Full stack</span></span>
-      <span class="line"><span>AI engineer.</span></span>
-    </h1>
-    <p class="card-lead">AI products, agents and web apps.</p>
+    <h1 class="name"><span class="name-line">Gaurav</span><span class="name-line">Jadhav</span></h1>
+    <p class="card-lead">Full stack AI engineer. AI products, agents and web apps.</p>
   </div>
-  <div class="shot"><img src="../assets/bitling-site.png" width="1440" height="760" alt=""></div>
+  <img class="card-pet" src="../assets/pet/hello.webp" width="260" height="300" alt="">
 </body>
 </html>
