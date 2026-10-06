@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gaurav Jadhav | Full Stack AI Engineer</title>
-  <meta name="description" content="Gaurav Jadhav is a full stack AI engineer in Mumbai. Merged pull requests in Pandoc, Phoenix, Readest and MockK, plus projects he built on his own.">
+  <meta name="description" content="Gaurav Jadhav is a full stack AI engineer in Mumbai. AI products, agents and web apps, plus open-source fixes merged into Pandoc, Phoenix and Readest.">
   <meta name="theme-color" content="#0d0e0f" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#f6f6f5" media="(prefers-color-scheme: light)">
   <link rel="canonical" href="https://jadhavgaurav.github.io/">
@@ -13,7 +13,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Gaurav Jadhav">
   <meta property="og:title" content="Gaurav Jadhav | Full Stack AI Engineer">
-  <meta property="og:description" content="Merged pull requests in Pandoc, Phoenix, Readest and MockK, plus projects built on his own.">
+  <meta property="og:description" content="AI products, agents and web apps, plus open-source fixes merged into Pandoc, Phoenix and Readest.">
   <meta property="og:url" content="https://jadhavgaurav.github.io/">
   <meta property="og:image" content="https://jadhavgaurav.github.io/assets/og.png">
   <meta property="og:image:width" content="1200">
@@ -58,9 +58,9 @@
     <div class="container header-inner">
       <a class="wordmark" href="#top">Gaurav Jadhav</a>
       <nav class="primary-nav" aria-label="Primary">
-        <a href="#open-source">Open source</a>
         <a href="#projects">Projects</a>
         <a href="#background">Background</a>
+        <a href="#open-source">Open source</a>
       </nav>
       <div class="header-actions">
         <a class="btn btn-quiet btn-small" href="#contact">Contact</a>
@@ -81,64 +81,24 @@
             <span class="line"><span>AI engineer.</span></span>
           </h1>
           <p class="hero-lead">
-            At Alsonotify, a Digibranders brand.
-            <span data-count="mergedPullRequests">43</span> merged pull requests across
-            <span data-count="mergedProjects">16</span> open-source projects,
-            <span data-count="openPullRequests">31</span> more in review.
+            At Alsonotify, a Digibranders brand. I build AI products, agents and web apps in TypeScript and Python.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#open-source">Open-source work</a>
+            <a class="btn btn-primary" href="#projects">Selected work</a>
             <a class="btn btn-quiet" href="#contact">Contact</a>
           </div>
         </div>
 
         <figure class="hero-visual">
-          <div class="field" id="field" aria-hidden="true" aria-busy="true">
-            <svg id="field-svg" viewBox="0 0 640 560" preserveAspectRatio="xMidYMid meet" role="presentation"></svg>
-            <div class="tooltip" id="tooltip" hidden></div>
-          </div>
-          <figcaption class="field-note">
-            Every project I have sent a pull request to. Size follows stars. Filled means merged, outlined means in review.
+          <a class="shot" href="https://jadhavgaurav.github.io/bitling/" rel="noopener">
+            <img src="assets/bitling-site.png" width="1440" height="760" fetchpriority="high" decoding="async"
+                 alt="The Bitling website: a pixel-font headline reading The Open-Source Desktop Pet for Developers, with download and live demo buttons.">
+          </a>
+          <figcaption class="shot-note">
+            Bitling, my desktop pet for developers.
+            <a class="text-link" href="https://jadhavgaurav.github.io/bitling/" rel="noopener">Try the live demo<span class="icon" style="--icon: url(/assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a>
           </figcaption>
         </figure>
-      </div>
-    </section>
-
-    <section class="section" id="open-source" aria-labelledby="oss-title">
-      <div class="container">
-        <h2 class="section-title reveal" id="oss-title">Fixes merged into projects people depend on.</h2>
-        <p class="section-lead reveal">Every row links to the pull request on GitHub. The list rebuilds each day from GitHub's API.</p>
-
-        <dl class="stats reveal" id="stats">
-          <div class="stat"><dt>Merged pull requests</dt><dd data-count="mergedPullRequests">43</dd></div>
-          <div class="stat"><dt>Projects with a merge</dt><dd data-count="mergedProjects">16</dd></div>
-          <div class="stat"><dt>Pull requests in review</dt><dd data-count="openPullRequests">31</dd></div>
-          <div class="stat"><dt>Languages touched</dt><dd data-count="languages">16</dd></div>
-        </dl>
-
-        <div class="toolbar reveal">
-          <div class="filters" role="group" aria-label="Filter projects">
-            <button type="button" class="filter" data-filter="all" aria-pressed="true">All</button>
-            <button type="button" class="filter" data-filter="merged" aria-pressed="false">Merged</button>
-            <button type="button" class="filter" data-filter="open" aria-pressed="false">In review</button>
-          </div>
-          <p class="toolbar-status" id="ledger-status" role="status"></p>
-        </div>
-
-        <ol class="ledger" id="ledger" aria-live="off">
-          <li class="ledger-skeleton" aria-hidden="true"></li>
-          <li class="ledger-skeleton" aria-hidden="true"></li>
-          <li class="ledger-skeleton" aria-hidden="true"></li>
-        </ol>
-        <noscript>
-          <p class="ledger-message">The open-source record needs JavaScript.
-            <a href="https://github.com/search?q=author%3Ajadhavgaurav+is%3Apr+is%3Amerged+-user%3Ajadhavgaurav&amp;type=pullrequests">Browse it on GitHub</a>.</p>
-        </noscript>
-        <p class="ledger-message" id="ledger-error" hidden>
-          The record could not be loaded.
-          <a href="https://github.com/search?q=author%3Ajadhavgaurav+is%3Apr+is%3Amerged+-user%3Ajadhavgaurav&amp;type=pullrequests">Browse it on GitHub</a>.
-        </p>
-        <button type="button" class="btn btn-quiet more" id="ledger-more" hidden></button>
       </div>
     </section>
 
@@ -194,7 +154,7 @@
           <div>
             <dt>Phishing website detection</dt>
             <dd>11,430 pages and 89 raw features, cut to 28 by four selection methods and explained with SHAP and LIME. Built during an internship at Code B Solutions.
-              <a class="text-link" href="https://website-phishing-detection.streamlit.app" rel="noopener">Live app<span class="icon" style="--icon: url(/assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a></dd>
+              <a class="text-link" href="https://github.com/jadhavgaurav/CodeB_Internship_Project" rel="noopener">Source<span class="icon" style="--icon: url(/assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a></dd>
           </div>
           <div>
             <dt>Kidney disease classification</dt>
@@ -249,6 +209,57 @@
             <p>The final-year project became the paper above.</p>
           </li>
         </ol>
+      </div>
+    </section>
+
+    <section class="section" id="open-source" aria-labelledby="oss-title">
+      <div class="container">
+        <div class="oss-head">
+          <div class="oss-intro">
+            <h2 class="section-title reveal" id="oss-title">Fixes merged into projects people depend on.</h2>
+            <p class="section-lead reveal">Open source runs alongside my main work. Every row links to the pull request on GitHub, and the list rebuilds each day.</p>
+            <dl class="stats reveal" id="stats">
+              <div class="stat"><dt>Merged pull requests</dt><dd data-count="mergedPullRequests">43</dd></div>
+              <div class="stat"><dt>Projects with a merge</dt><dd data-count="mergedProjects">16</dd></div>
+              <div class="stat"><dt>Pull requests in review</dt><dd data-count="openPullRequests">31</dd></div>
+              <div class="stat"><dt>Languages touched</dt><dd data-count="languages">16</dd></div>
+            </dl>
+          </div>
+
+          <figure class="oss-visual">
+            <div class="field" id="field" aria-hidden="true" aria-busy="true">
+              <svg id="field-svg" viewBox="0 0 640 560" preserveAspectRatio="xMidYMid meet" role="presentation"></svg>
+              <div class="tooltip" id="tooltip" hidden></div>
+            </div>
+            <figcaption class="field-note">
+              Every project I have sent a pull request to. Size follows stars. Filled means merged, outlined means in review.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="toolbar reveal">
+          <div class="filters" role="group" aria-label="Filter projects">
+            <button type="button" class="filter" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="filter" data-filter="merged" aria-pressed="false">Merged</button>
+            <button type="button" class="filter" data-filter="open" aria-pressed="false">In review</button>
+          </div>
+          <p class="toolbar-status" id="ledger-status" role="status"></p>
+        </div>
+
+        <ol class="ledger" id="ledger" aria-live="off">
+          <li class="ledger-skeleton" aria-hidden="true"></li>
+          <li class="ledger-skeleton" aria-hidden="true"></li>
+          <li class="ledger-skeleton" aria-hidden="true"></li>
+        </ol>
+        <noscript>
+          <p class="ledger-message">The open-source record needs JavaScript.
+            <a href="https://github.com/search?q=author%3Ajadhavgaurav+is%3Apr+is%3Amerged+-user%3Ajadhavgaurav&amp;type=pullrequests">Browse it on GitHub</a>.</p>
+        </noscript>
+        <p class="ledger-message" id="ledger-error" hidden>
+          The record could not be loaded.
+          <a href="https://github.com/search?q=author%3Ajadhavgaurav+is%3Apr+is%3Amerged+-user%3Ajadhavgaurav&amp;type=pullrequests">Browse it on GitHub</a>.
+        </p>
+        <button type="button" class="btn btn-quiet more" id="ledger-more" hidden></button>
       </div>
     </section>
 

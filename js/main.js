@@ -54,6 +54,24 @@ function initReveal() {
   targets.forEach((target) => observer.observe(target));
 }
 
+/* The bubble entrance starts when the field is on screen, not at page load. */
+function initFieldEntrance() {
+  const field = document.getElementById("field");
+  if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+    field.classList.add("is-live");
+    return;
+  }
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (!entry.isIntersecting) return;
+      field.classList.add("is-live");
+      observer.disconnect();
+    },
+    { threshold: 0.25 },
+  );
+  observer.observe(field);
+}
+
 /* Numbers count up once, when the stat strip scrolls into view. */
 function countUp(node, target) {
   if (prefersReducedMotion) {
@@ -71,11 +89,6 @@ function countUp(node, target) {
 }
 
 function applyTotals(totals) {
-  document.querySelectorAll("[data-count]").forEach((node) => {
-    const value = totals[node.dataset.count];
-    if (typeof value === "number" && !node.closest("#stats")) node.textContent = String(value);
-  });
-
   const stats = document.getElementById("stats");
   const statNodes = [...stats.querySelectorAll("[data-count]")];
   const run = () =>
@@ -137,4 +150,5 @@ async function initOpenSourceRecord() {
 initThemeToggle();
 initHeaderRule();
 initReveal();
+initFieldEntrance();
 initOpenSourceRecord();

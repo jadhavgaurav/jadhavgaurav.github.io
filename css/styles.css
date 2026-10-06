@@ -281,12 +281,6 @@ a { color: inherit; }
   line-height: 1.5;
   color: var(--muted);
 }
-.hero-lead [data-count] {
-  color: var(--text);
-  font-family: var(--font-mono);
-  font-size: 0.92em;
-  font-weight: 500;
-}
 
 .hero-actions {
   display: flex;
@@ -297,13 +291,18 @@ a { color: inherit; }
 
 .hero-visual { min-width: 0; }
 
-.field {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 640 / 560;
+.shot {
+  display: block;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: transform 300ms var(--ease), border-color 200ms ease;
 }
-.field svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.shot:hover { transform: translateY(-3px); border-color: var(--muted); }
+.shot img { width: 100%; height: auto; }
 
+.shot-note,
 .field-note {
   max-width: 34rem;
   margin-top: 14px;
@@ -312,6 +311,14 @@ a { color: inherit; }
   line-height: 1.55;
   color: var(--muted);
 }
+.shot-note .text-link { margin-left: 6px; }
+
+.field {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 640 / 560;
+}
+.field svg { display: block; width: 100%; height: 100%; overflow: visible; }
 
 .bubble { cursor: pointer; }
 .bubble-body {
@@ -362,22 +369,28 @@ a { color: inherit; }
   .js .hero-title .line:nth-child(2) > span { animation-delay: 90ms; }
   .js .hero-lead,
   .js .hero-actions,
-  .js .field-note {
+  .js .hero-visual {
     opacity: 0;
     animation: fade-up 800ms var(--ease) forwards;
   }
   .js .hero-lead { animation-delay: 260ms; }
   .js .hero-actions { animation-delay: 360ms; }
-  .js .field-note { animation-delay: 900ms; }
+  .js .hero-visual { animation-delay: 200ms; }
 
-  /* The entrance runs on the outer group so it never fights the hover scale. */
+  /*
+   * The field sits below the fold, so its bubbles wait until it scrolls into
+   * view (main.js adds .is-live). The entrance runs on the outer group so it
+   * never fights the hover scale.
+   */
   .js .bubble-enter {
     opacity: 0;
     transform: scale(0.2);
     transform-box: fill-box;
     transform-origin: center;
+  }
+  .js .field.is-live .bubble-enter {
     animation: pop 800ms var(--ease) forwards;
-    animation-delay: calc(var(--i, 0) * 22ms + 200ms);
+    animation-delay: calc(var(--i, 0) * 22ms);
   }
 
   .js .reveal {
@@ -410,14 +423,20 @@ a { color: inherit; }
   font-size: 1.0625rem;
 }
 
+/* Open-source header: copy and numbers on the left, the star-scaled field on the right. */
+.oss-head { display: grid; gap: clamp(40px, 6vw, 64px); align-items: center; }
+@media (min-width: 960px) {
+  .oss-head { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); }
+}
+.oss-visual { min-width: 0; }
+
 /* Stats */
 .stats {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 28px 24px;
-  margin-top: clamp(40px, 6vw, 64px);
+  margin-top: clamp(32px, 5vw, 48px);
 }
-@media (min-width: 720px) { .stats { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 
 .stat { padding-top: 16px; border-top: 1px solid var(--text); }
 .stat dt { font-size: 0.875rem; color: var(--muted); }

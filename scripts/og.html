@@ -13,11 +13,11 @@
   <title>Social preview</title>
   <link rel="stylesheet" href="../css/styles.css">
   <style>
-    body { width: 1200px; height: 630px; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 24px; padding: 0 64px; }
+    body { width: 1200px; height: 630px; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 48px; padding: 0 64px; }
     .card-name { font-size: 1.125rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 28px; }
     .hero-title { font-size: 5rem; }
     .card-lead { margin-top: 28px; max-width: 30rem; font-size: 1.5rem; line-height: 1.4; color: var(--muted); }
-    .card-lead strong { color: var(--text); font-weight: 500; }
+    .shot:hover { transform: none; }
   </style>
 </head>
 <body>
@@ -27,13 +27,8 @@
       <span class="line"><span>Full stack</span></span>
       <span class="line"><span>AI engineer.</span></span>
     </h1>
-    <p class="card-lead">Merged pull requests in <strong>Pandoc</strong>, <strong>Phoenix</strong>, <strong>Readest</strong> and <strong>MockK</strong>.</p>
+    <p class="card-lead">AI products, agents and web apps.</p>
   </div>
-  <div class="field" id="field"><svg id="field-svg" viewBox="0 0 640 560" role="presentation"></svg><div class="tooltip" hidden></div></div>
-  <script type="module">
-    import { renderField } from "../js/bubbles.js";
-    const record = await (await fetch("../data/oss.json")).json();
-    renderField(document.getElementById("field"), record.projects, () => {});
-  </script>
+  <div class="shot"><img src="../assets/bitling-site.png" width="1440" height="760" alt=""></div>
 </body>
 </html>
