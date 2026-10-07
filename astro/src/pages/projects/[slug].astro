@@ -1,0 +1,66 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectVisual from '../../components/ProjectVisual.astro';
+import ExternalLink from '../../components/ExternalLink.astro';
+import { getProjects, type Project } from '../../lib/portfolio';
+
+export const getStaticPaths = (async () => {
+  const projects = await getProjects();
+  return projects.map((project, index) => ({
+    params: { slug: project.id },
+    props: { project, following: projects[(index + 1) % projects.length] },
+  }));
+}) satisfies GetStaticPaths;
+
+interface Props { project: Project; following: Project; }
+const { project, following } = Astro.props;
+---
+<BaseLayout title={project.name} description={project.summary} route={`/projects/${project.id}.html`} active="Work">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="/work.html">All work</a><span>/</span><span>{project.name}</span></div>
+    <section class="case-hero">
+      <span class="section-index">{project.category.toUpperCase()} / {project.year}</span>
+      <h1>{project.name}<em>{project.headline}</em></h1>
+      <p class="page-lede">{project.summary}</p>
+      <dl class="case-meta">
+        <div><dt>My focus</dt><dd>{project.role}</dd></div>
+        <div><dt>Working with</dt><dd>{project.stack.join(' · ')}</dd></div>
+      </dl>
+    </section>
+    <ProjectVisual project={project} />
+    <div class="case-layout">
+      <aside class="case-contents">
+        <span class="eyebrow">IN THIS STORY</span>
+        <a href="#context">The context</a><a href="#contribution">My contribution</a>
+        <a href="#outcome">The outcome</a><a href="#evidence">Explore the evidence</a>
+      </aside>
+      <div class="case-narrative">
+        <section class="case-context" id="context">
+          <span class="section-index">01 / THE CONTEXT</span>
+          <h2>{project.headline}</h2><p>{project.context}</p>
+          <h3>The problem to work through</h3><p>{project.problem}</p>
+        </section>
+        <section id="contribution">
+          <span class="section-index">02 / MY CONTRIBUTION</span>
+          {project.changes.map(([title, body], index) => (
+            <section class="case-chapter" id={`decision-${index}`}>
+              <span class="chapter-number">0{index + 1}</span><div><h3>{title}</h3><p>{body}</p></div>
+            </section>
+          ))}
+        </section>
+        <section class="case-outcome" id="outcome">
+          <span class="section-index">03 / THE OUTCOME</span><h2>{project.result}</h2><p>{project.result_note}</p>
+        </section>
+        <section class="case-reflection"><h3>What I take from it</h3><p>{project.lesson}</p></section>
+        <section id="evidence" class="case-evidence">
+          <span class="section-index">04 / EXPLORE THE EVIDENCE</span>
+          <div class="evidence-links">{project.links.map(([label, url]) => <ExternalLink href={url}>{label}</ExternalLink>)}</div>
+        </section>
+      </div>
+    </div>
+    <a class="next-story" href={`/projects/${following.id}.html`}>
+      <span>CONTINUE EXPLORING</span><strong>{following.name}</strong><span>{following.category}</span>
+    </a>
+  </div>
+</BaseLayout>

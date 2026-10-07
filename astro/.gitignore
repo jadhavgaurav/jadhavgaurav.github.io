@@ -1,0 +1,7 @@
+.sites-runtime/
+.env*
+__pycache__/
+node_modules/
+.astro/
+dist/
+.vercel/

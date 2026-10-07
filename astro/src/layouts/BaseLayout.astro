@@ -1,0 +1,41 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+import '../styles/portfolio.css';
+
+interface Props {
+  title: string;
+  description: string;
+  route: string;
+  active?: 'Work' | 'Open source' | 'Journey';
+  home?: boolean;
+}
+const { title, description, route, active, home = false } = Astro.props;
+const pageTitle = home ? 'Gaurav Jadhav — AI & Product Engineer' : `${title} — Gaurav Jadhav`;
+const canonical = new URL(route, Astro.site);
+const favicon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231d4fff'/%3E%3Ctext x='9' y='44' font-family='Arial,sans-serif' font-size='39' font-weight='700' fill='white'%3Egj%3C/text%3E%3C/svg%3E";
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f9fb" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href={favicon} />
+    {home && <link rel="preload" href="/assets/fonts/SpaceGrotesk.ttf" as="font" type="font/ttf" crossorigin />}
+  </head>
+  <body class={home ? 'portfolio-home' : 'portfolio-page'}>
+    <Header active={active} home={home} />
+    <main id="main"><slot /></main>
+    {!home && <Footer />}
+  </body>
+</html>

@@ -1,0 +1,382 @@
+{
+  "checkedAt": "2026-10-07",
+  "merged": [
+    {
+      "url": "https://github.com/melihbirim/csvql/pull/199",
+      "title": "perf: high-cardinality GROUP BY sorts a compact array and uses more merge shards",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/melihbirim/csvql/pull/198",
+      "title": "fix: SUM/AVG no longer change with --threads (#185)",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/sheredom/utf8.h/pull/142",
+      "title": "Add Armenian and Cherokee case mappings",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/rrrene/credo/pull/1317",
+      "title": "Fix NegatedConditionsWithElse false positive for double negation",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/oras-project/oras-go/pull/1437",
+      "title": "perf(auth): cache the redirect-safe client instead of rebuilding it per send",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/phoenixframework/phoenix/pull/6848",
+      "title": "Restore NULL parameters on phx.gen.cert's public key algorithm",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/mockk/mockk/pull/1558",
+      "title": "Fix coVerify on spyk of a suspend SAM interface leaking Continuation",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/oras-project/oras-go/pull/1436",
+      "title": "perf(status): avoid allocating a channel on every TryCommit call",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/readest/readest/pull/6270",
+      "title": "fix(reader): preserve style tag attributes in the style transformer",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/jgm/pandoc/pull/11877",
+      "title": "ANSI writer: fix missing bar on blockquote's first line",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/melihbirim/csvql/pull/178",
+      "title": "feat: add LPAD/RPAD string functions",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/oras-project/oras-go/pull/1428",
+      "title": "perf(graph): bound goroutine fan-out in IndexAll",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/widelands/widelands/pull/7064",
+      "title": "Escape pinned note text before rendering as richtext",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/readest/readest/pull/6168",
+      "title": "fix(reader): keep sliders mirrored when a book turns the layout RTL",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/jonassaa/platypusgit/pull/447",
+      "title": "fix(git): end option parsing before every push and pull value",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/jonassaa/platypusgit/pull/446",
+      "title": "fix(settings): let settings and forge account rows follow UI density",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/QuantEcon/QuantEcon.py/pull/964",
+      "title": "MAINT: Code-hygiene quick wins (#882)",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/oras-project/oras-go/pull/1418",
+      "title": "perf(content): actually use the pooled 1 MiB copy buffer",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/mnfst/llm-gateway/pull/2858",
+      "title": "fix: give repeated Responses call ids unique values",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/Tollcraft/soroban-budget-assert/pull/603",
+      "title": "fix: strip the trailing comment from the @measure marker before parsing",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/Tollcraft/soroban-budget-assert/pull/601",
+      "title": "fix: make the developer scripts run on macOS's bash 3.2",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/jonassaa/platypusgit/pull/424",
+      "title": "fix(diff): say so when an image preview will not decode",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/readest/readest/pull/6116",
+      "title": "fix(sync): repair missing local covers from the file-sync remote",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/mnfst/llm-gateway/pull/2841",
+      "title": "fix(routing): show loading state while a fallback reorder saves",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/jonassaa/platypusgit/pull/273",
+      "title": "fix(net): SIGTERM a cancelled op's process group before SIGKILL",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/readest/readest/pull/5905",
+      "title": "fix(sync): converge multi-device file sync (#5900)",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/mnfst/llm-gateway/pull/2772",
+      "title": "fix: Anthropic server tools get parameters when forwarded to chat-completions providers",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/Exiv2/exiv2/pull/9450",
+      "title": "Fix incorrect image size for OS/2 1.x / Windows 2.x BMP files",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/jonassaa/platypusgit/pull/231",
+      "title": "Add reveal in file manager and open in terminal to context menus",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/readest/readest/pull/5878",
+      "title": "fix(library): save the new data location when migrating an empty library",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/jonassaa/platypusgit/pull/228",
+      "title": "fix(git): validate branch names before creating or renaming",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/jonassaa/platypusgit/pull/220",
+      "title": "feat(cli): add subcommand aliases for 7 more screens",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/jonassaa/platypusgit/pull/219",
+      "title": "feat(repo): name the active repository and branch in the window title",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/jonassaa/platypusgit/pull/218",
+      "title": "feat(cli): add pgit --version / -V",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/openeverest/openeverest/pull/3052",
+      "title": "fix(ui): hide provider version in database tile",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/StellarAgent-AI-Agent-Payment-Rails/Stellar-agentic/pull/400",
+      "title": "fix(ci): bump GitHub Actions to Node 24 runtime versions",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/StellarAgent-AI-Agent-Payment-Rails/Stellar-agentic/pull/399",
+      "title": "docs: fix README/CONTRIBUTING badges and links pointing at the wrong places",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/mnfst/llm-gateway/pull/2764",
+      "title": "fix: invalidate routing cache after model refresh",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/Tollcraft/soroban-budget-assert/pull/513",
+      "title": "fix: bring hook installer scripts to behavioral parity",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/firstcontributions/first-contributions/pull/123821",
+      "title": "Add Gaurav Jadhav to Contributors.md",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/readest/readest/pull/5867",
+      "title": "fix(library): rubber-band the bookshelf at both edges and keep the reader from overscrolling",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/mnfst/llm-gateway/pull/2763",
+      "title": "fix: show loading state when switching agents on the overview page",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/openeverest/openeverest/pull/3047",
+      "title": "fix: handle Kubernetes milli-byte suffix in memoryParser",
+      "status": "merged"
+    },
+    {
+      "url": "https://github.com/Tollcraft/soroban-budget-assert/pull/512",
+      "title": "fix: add curl preflight check to cargo-budget-report",
+      "status": "merged"
+    }
+  ],
+  "open": [
+    {
+      "url": "https://github.com/haskell/cabal/pull/12409",
+      "title": "Do not run Haddock for components added to a multi-repl session",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/pylint-dev/pylint/pull/11493",
+      "title": "Fix used-before-assignment false positive for names shadowed by a later method",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/tarantool/vshard/pull/668",
+      "title": "Encode error objects into json before logging them",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/makeplane/plane/pull/9684",
+      "title": "fix(cycles): make transfer_cycle_issues atomic",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/ThrowTheSwitch/Unity/pull/852",
+      "title": "Keep commas in parentheses in test name filters",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/jeremyjh/dialyxir/pull/606",
+      "title": "Fix call_with_opaque formatting on OTP 28+",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/capricorn86/happy-dom/pull/2453",
+      "title": "fix: [#1769] Return numbers from HTMLTextAreaElement rows and cols",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/pylint-dev/astroid/pull/3323",
+      "title": "Infer the values of `yield from` in FunctionDef.infer_yield_result",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/pylint-dev/astroid/pull/3322",
+      "title": "Infer TypedDict to a single class",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/pylint-dev/astroid/pull/3321",
+      "title": "Infer a partial of an async generator function as an async generator",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/capricorn86/happy-dom/pull/2452",
+      "title": "fix: [#2077] Handle round brackets inside quoted attribute values after a pseudo selector",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/Exiv2/exiv2/pull/9484",
+      "title": "Keep all values of repeatable IPTC datasets on insert",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/Exiv2/exiv2/pull/9517",
+      "title": "Stop bash_tests and bugfixes from sharing tmp copies of test files",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/OpenFn/lightning/pull/5129",
+      "title": "Close the IDE with Cmd/Ctrl+E while the code editor has focus",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/apache/commons-lang/pull/1798",
+      "title": "[LANG-1249] Propagate excludeFieldNames to recursive toString rendering",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/JamesNK/Newtonsoft.Json/pull/3134",
+      "title": "Fix TypeNameHandling.All dropping type info for Guid, TimeSpan, Uri, DateTimeOffset",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/makeplane/plane/pull/9681",
+      "title": "fix(editor): prevent duplicate tab when clicking links in read-only view",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/StellarAgent-AI-Agent-Payment-Rails/Stellar-agentic/pull/401",
+      "title": "feat(dx): add pre-commit hooks via husky + lint-staged",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/Exiv2/exiv2/pull/9489",
+      "title": "Print nested XMP properties through their own print function",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/Exiv2/exiv2/pull/9504",
+      "title": "basicio: write through a temp file so a crash can't truncate the original (#9482)",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/ReactiveX/RxSwift/pull/2735",
+      "title": "Synchronize ScanSink's accumulator to fix a data race (fixes #2679)",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/unionai-oss/pandera/pull/2483",
+      "title": "fix: make DataFrameSchema hashable",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/r-lib/testthat/pull/2355",
+      "title": "Fix snapshot cleanup deleting .new files for multi-dot filenames",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/rubocop/rubocop/pull/15725",
+      "title": "Remove an orphaned enable when its disable is redundant",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/Qalculate/libqalculate/pull/1018",
+      "title": "Require autoconf >= 2.73 to avoid GCC 16 FTBFS (fixes #979)",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/realm/SwiftLint/pull/6906",
+      "title": "Fix prefer_key_path to catch closures nested in macro expansions",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/ouch-org/ouch/pull/1072",
+      "title": "fix: skip special files instead of failing to compress",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/openeverest/openeverest/pull/3140",
+      "title": "fix(cli): delete the InstalledExtension on extension uninstall",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/makeplane/plane/pull/9700",
+      "title": "fix(auth): default HTTP_USER_AGENT to empty string in save_user_data",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/ihabunek/twitch-dl/pull/193",
+      "title": "Fall back to best quality when --quality source has no chunked group",
+      "status": "open"
+    },
+    {
+      "url": "https://github.com/makeplane/plane/pull/9685",
+      "title": "fix(security): scope cycle/module lookup by workspace in advance analytics chart",
+      "status": "open"
+    }
+  ]
+}

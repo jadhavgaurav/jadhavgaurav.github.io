@@ -1,0 +1,7 @@
+.sites-runtime
+.openai
+.astro
+.git
+node_modules
+dist
+__pycache__

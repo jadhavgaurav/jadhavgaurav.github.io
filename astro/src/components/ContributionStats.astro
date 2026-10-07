@@ -1,0 +1,12 @@
+---
+import { getContributions, contributionStats, snapshotLabel } from '../lib/portfolio';
+interface Props { verified?: boolean; }
+const { verified = false } = Astro.props;
+const stats = contributionStats(await getContributions());
+---
+<div class="oss-stats">
+  <div><strong>{stats.merged}</strong><span>merged pull requests</span></div>
+  <div><strong>{stats.projects}</strong><span>projects with merged work</span></div>
+  <div><strong>{stats.open}</strong><span>open pull requests</span></div>
+  <span class="snapshot-note">{verified ? 'Verified snapshot' : 'GitHub snapshot'}<br />{snapshotLabel}</span>
+</div>

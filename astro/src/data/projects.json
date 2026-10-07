@@ -1,0 +1,613 @@
+[
+  {
+    "id": "oyechats",
+    "name": "OyeChats",
+    "category": "AI engineering",
+    "year": "2026",
+    "tone": "cobalt",
+    "headline": "Better answers start before the answer.",
+    "summary": "Grounded conversations, more dependable retrieval, and a shorter path from question to useful answer.",
+    "role": "Retrieval, prompt architecture, streaming & background jobs",
+    "stack": [
+      "Python",
+      "RAG",
+      "Streaming",
+      "Durable queues"
+    ],
+    "flow": [
+      "Question",
+      "Retrieve context",
+      "Build prompt",
+      "Stream answer"
+    ],
+    "context": "OyeChats is a conversational product that answers from a website’s content, qualifies leads, and supports human handoff. A useful conversation depends on the retrieval and execution paths underneath it.",
+    "problem": "Useful knowledge-base content was being excluded by a relevance gate. Duplicated retrieval paths and oversized assembled prompts also made the behavior harder to reason about.",
+    "changes": [
+      [
+        "Retrieval diagnosis",
+        "I traced the relevance gate that excluded useful content, following the path from retrieved material to the answer rather than treating every refusal as a prompt problem."
+      ],
+      [
+        "A simpler execution path",
+        "I consolidated duplicated RAG pipelines and prompt assembly, and worked on streaming and durable qualification jobs so the conversation and its follow-up work could be handled more deliberately."
+      ],
+      [
+        "Evaluation-driven corrections",
+        "Later changes addressed regressions found in question evaluations, including company-context answers and long whitespace runs that could block a worker."
+      ]
+    ],
+    "result": "15,233 to 8,120 tokens",
+    "result_note": "One assembled prompt, as documented in the remediation pull request. This is a prompt-size comparison, not a latency or answer-quality benchmark.",
+    "lesson": "Retrieval gates, prompt assembly, and background execution all shape the answer a person sees. Diagnose that whole path before adding another instruction.",
+    "links": [
+      [
+        "Retrieval diagnosis",
+        "https://github.com/digibranders/oye-chats-platform/pull/450"
+      ],
+      [
+        "Prompt, streaming & durability",
+        "https://github.com/digibranders/oye-chats-platform/pull/455"
+      ],
+      [
+        "Evaluation follow-up",
+        "https://github.com/digibranders/oye-chats-platform/pull/487"
+      ],
+      [
+        "Explore OyeChats",
+        "https://www.oyechats.com/"
+      ]
+    ],
+    "order": 0
+  },
+  {
+    "id": "alsonotify",
+    "name": "AlsoNotify",
+    "category": "Product systems",
+    "year": "2026",
+    "tone": "slate",
+    "headline": "Trust is a product feature.",
+    "summary": "Authentication, safer email rendering, and reports that agree on what the numbers mean.",
+    "role": "Frontend security, reporting consistency & email rendering",
+    "stack": [
+      "Next.js",
+      "TypeScript",
+      "React",
+      "TanStack Query"
+    ],
+    "flow": [
+      "Sign in",
+      "Protected workspace",
+      "Shared KPI rules",
+      "Consistent export"
+    ],
+    "context": "AlsoNotify brings task tracking, calendars, leave management, finance, reporting, and notifications into a shared work platform. Its frontend uses Next.js, React, and feature-based components.",
+    "problem": "The same KPI could receive a different rating in the interface and the exported PDF. Protected page shells were guarded only in the client, while email styles were being dropped before their scoping code could run.",
+    "changes": [
+      [
+        "One meaning for a number",
+        "I unified KPI thresholds so the employee drawer and PDF report use the same banding function. Previously, 72% occupancy could read Low on screen and appear green in the export."
+      ],
+      [
+        "A safer entry into the workspace",
+        "I constrained post-login redirects to local paths, added a server-side cookie-presence route guard, and tightened replay masking. Backend verification remains the authentication boundary."
+      ],
+      [
+        "Email styling with boundaries",
+        "I fixed the sanitizer path that discarded leading style blocks and corrected the scoping expression that broke media rules. Existing CSS sanitization then applies to those blocks as intended."
+      ]
+    ],
+    "result": "One shared KPI definition",
+    "result_note": "The documented reconciliation included 813 passing tests across 73 files. That is the verification reported for that change, not a current coverage claim for the entire product.",
+    "lesson": "Consistency matters at the seams: an export should mean the same thing as the screen, and rendering a document should preserve its layout without allowing it to restyle the surrounding app.",
+    "links": [
+      [
+        "Reporting & email rendering",
+        "https://github.com/digibranders/alsonotify-next-app-frontend/pull/399"
+      ],
+      [
+        "Authentication hardening",
+        "https://github.com/digibranders/alsonotify-next-app-frontend/pull/394"
+      ],
+      [
+        "Setup reconciliation",
+        "https://github.com/digibranders/alsonotify-next-app-frontend/pull/397"
+      ],
+      [
+        "Product architecture",
+        "https://github.com/digibranders/alsonotify-next-app-frontend"
+      ]
+    ],
+    "order": 1
+  },
+  {
+    "id": "cleanstart",
+    "name": "CleanStart",
+    "category": "Product engineering",
+    "year": "2026",
+    "tone": "ice",
+    "headline": "Fast for readers. Clear for editors.",
+    "summary": "CMS performance, correct cache timing, and product interfaces that make the next step clearer.",
+    "role": "CMS performance, caching, navigation & content journeys",
+    "stack": [
+      "Next.js",
+      "TypeScript",
+      "CMS",
+      "Caching"
+    ],
+    "flow": [
+      "Editor publishes",
+      "Write commits",
+      "Cache purges",
+      "Reader sees update"
+    ],
+    "context": "CleanStart’s web and CMS experience connects security products, a content catalog, resources, and reader journeys. The same system has to work for someone publishing content and someone discovering it.",
+    "problem": "Relationship lookups multiplied in the CMS list view, and cache invalidation could run before a database write committed. Publishing could leave a new resource unavailable until a later revalidation.",
+    "changes": [
+      [
+        "Batch the repeated work",
+        "I batched CMS relationship lookups and separated publishing from integration work, reducing the request fan-out in the documented list view."
+      ],
+      [
+        "Make the timing correct",
+        "I moved cache purging after the write commits so revalidation reads the newly published state."
+      ],
+      [
+        "Design the next useful step",
+        "I worked on the reading-depth resource journey and its editor overrides, reduced the animation cost in a follow-up, and gave the Tricorder platform a clearer place in product navigation."
+      ]
+    ],
+    "result": "~75 to 2 relationship requests",
+    "result_note": "The documented 25-row CMS list view. This measures relationship requests for that example, not total page requests or a universal speedup.",
+    "lesson": "Performance and correctness often meet at the same boundary. A fast invalidation at the wrong moment still gives the reader the wrong page.",
+    "links": [
+      [
+        "CMS performance",
+        "https://github.com/digibranders/cleanstart-web/pull/279"
+      ],
+      [
+        "Cache correctness",
+        "https://github.com/digibranders/cleanstart-web/pull/276"
+      ],
+      [
+        "Reader journey",
+        "https://github.com/digibranders/cleanstart-web/pull/287"
+      ],
+      [
+        "Bundle-size follow-up",
+        "https://github.com/digibranders/cleanstart-web/pull/288"
+      ],
+      [
+        "Product navigation",
+        "https://github.com/digibranders/cleanstart-web/pull/290"
+      ]
+    ],
+    "order": 2
+  },
+  {
+    "id": "victus",
+    "name": "VICTUS",
+    "category": "AI systems",
+    "year": "2025–2026",
+    "tone": "ice",
+    "headline": "An assistant with tools. And boundaries.",
+    "summary": "Document-aware orchestration with tool policies, approval controls, and inspectable execution traces.",
+    "role": "Agent architecture, retrieval & interface",
+    "stack": [
+      "Python",
+      "Retrieval",
+      "Agents",
+      "Tool policies"
+    ],
+    "flow": [
+      "Request",
+      "Context & tools",
+      "Policy check",
+      "Inspectable action"
+    ],
+    "context": "VICTUS explores an assistant that can work with documents and call tools. The current backend and frontend repositories are the clearest entry points; the original project records an earlier iteration.",
+    "problem": "An agent that can take action needs more than a fluent response. A person needs to understand what context was used, which actions are allowed, and what actually happened.",
+    "changes": [
+      [
+        "Context before action",
+        "I built around document retrieval and AI orchestration so tool calls have a context path rather than appearing as isolated model output."
+      ],
+      [
+        "Policies in the execution path",
+        "Tool policies and approval controls make permissions part of the system. Behavior depends on the configured execution mode."
+      ],
+      [
+        "A trace people can inspect",
+        "Execution traces expose the path between request and action. The interface is part of making that path understandable."
+      ]
+    ],
+    "result": "Retrieve. Decide. Trace.",
+    "result_note": "An architectural focus, not a production performance claim. Inspect the current backend for the configured policy and approval behavior.",
+    "lesson": "Inspectability belongs in the product. It is much easier to reason about an agent when its actions have explicit boundaries and a visible record.",
+    "links": [
+      [
+        "Current backend",
+        "https://github.com/jadhavgaurav/victus-backend"
+      ],
+      [
+        "Current frontend",
+        "https://github.com/jadhavgaurav/victus-frontend"
+      ],
+      [
+        "Earlier iteration",
+        "https://github.com/jadhavgaurav/PROJECT-VICTUS"
+      ]
+    ],
+    "order": 3
+  },
+  {
+    "id": "inneed",
+    "name": "INNEED",
+    "category": "Full-stack product",
+    "year": "2026",
+    "tone": "paper",
+    "headline": "Own less. Do more.",
+    "summary": "A rental marketplace that follows the journey beyond a listing, through payment, return, and resolution.",
+    "role": "Marketplace workflows, payments & administration",
+    "stack": [
+      "TypeScript",
+      "Marketplace",
+      "Razorpay",
+      "Workflows"
+    ],
+    "flow": [
+      "Discover",
+      "Rent & verify",
+      "Return",
+      "Resolve"
+    ],
+    "context": "INNEED is a rental marketplace connecting discovery with vendor onboarding, checkout, the rental lifecycle, disputes, and administration.",
+    "problem": "Listings are only one part of a marketplace. Vendors and renters need the product to manage what happens after an order, including payment verification and exceptions.",
+    "changes": [
+      [
+        "The complete lifecycle",
+        "I brought account and vendor workflows, listings, rental state, and administration into the same product."
+      ],
+      [
+        "Payments that connect to the order",
+        "The payment integration includes Razorpay and verification, with the rental workflow continuing beyond the checkout screen."
+      ],
+      [
+        "A place for exceptions",
+        "Disputes and administrative workflows give non-happy-path cases a place in the system."
+      ]
+    ],
+    "result": "Discovery through resolution",
+    "result_note": "The repository documents the implementation and setup. No adoption or transaction-volume claim is implied.",
+    "lesson": "Designing a marketplace means following an order until it is resolved, not stopping when the payment button works.",
+    "links": [
+      [
+        "Explore the source",
+        "https://github.com/jadhavgaurav/inneed"
+      ]
+    ],
+    "order": 4
+  },
+  {
+    "id": "fynix",
+    "name": "Fynix",
+    "category": "Commerce & workflows",
+    "year": "2026",
+    "tone": "slate",
+    "headline": "The quote, the charge, the invoice. In agreement.",
+    "summary": "Checkout edge cases, referral controls, tax-aware invoicing, and recovery workflows.",
+    "role": "Checkout correctness, invoicing & registration tooling",
+    "stack": [
+      "Next.js",
+      "TypeScript",
+      "Razorpay",
+      "Transactions"
+    ],
+    "flow": [
+      "Quote",
+      "Reserve",
+      "Verify payment",
+      "Invoice"
+    ],
+    "context": "The Fynix work includes an event-registration and payment journey with country-based pricing, referral codes, invoicing, and administrative recovery.",
+    "problem": "A large referral discount could create an order below the payment provider’s minimum. A currency-related payment decline also exposed internal error wording that gave the buyer no useful next step.",
+    "changes": [
+      [
+        "Keep one price through the flow",
+        "I capped the discount percentage before the order was created so the quote, stored order, and rebuilt invoice continue to agree. The documented USD example changed a 99% discount to an effective 98% discount."
+      ],
+      [
+        "Explain an actionable retry",
+        "I replaced an opaque payment-failure message with a conditional country-and-currency hint, keyed to the order currency. The message does not pretend to know where the card was issued."
+      ],
+      [
+        "Operational tools",
+        "My work also covered tax-aware invoicing, referral limits, registration tooling, and manual recovery paths."
+      ]
+    ],
+    "result": "One consistent amount",
+    "result_note": "In the documented checkout case, the adjusted discount produced a $1.98 charge above the provider minimum. This is an example from that fix, not pricing guidance.",
+    "lesson": "Payment UX depends on the data model. Keeping one stored discount driving the quote and invoice prevents a friendly interface from promising the wrong amount.",
+    "links": [
+      [
+        "Minimum-charge correction",
+        "https://github.com/digibranders/fynix-digital-v2/pull/71"
+      ],
+      [
+        "Actionable payment feedback",
+        "https://github.com/digibranders/fynix-digital-v2/pull/73"
+      ],
+      [
+        "Invoicing foundations",
+        "https://github.com/digibranders/fynix-digital-v2/pull/26"
+      ],
+      [
+        "Referral & recovery tooling",
+        "https://github.com/digibranders/fynix-digital-v2/pull/55"
+      ]
+    ],
+    "order": 5
+  },
+  {
+    "id": "gkr",
+    "name": "GKR Hospitality",
+    "category": "Web experience",
+    "year": "2026",
+    "tone": "paper",
+    "headline": "A lighter site. A stronger foundation.",
+    "summary": "Image delivery, search visibility, contact-form protection, and considered maintenance.",
+    "role": "Performance, technical SEO & security",
+    "stack": [
+      "Next.js",
+      "Images",
+      "Metadata",
+      "CSP"
+    ],
+    "flow": [
+      "Lighter assets",
+      "Crawlable pages",
+      "Clear metadata",
+      "Safer contact"
+    ],
+    "context": "GKR Hospitality is a public-facing website with a gallery, service information, reviews, and a contact journey. Its quality depends as much on delivery and discoverability as on appearance.",
+    "problem": "Oversized imagery made delivery unnecessarily heavy. An inherited canonical pointed multiple pages at the homepage, and the contact and security foundations needed attention.",
+    "changes": [
+      [
+        "Make imagery practical to deliver",
+        "I re-encoded 70 images, removed unused assets, and stopped serving gallery originals in the documented maintenance work."
+      ],
+      [
+        "Give each page its own identity",
+        "I corrected the sitewide canonical collapse, added sitemap and robots support, and improved page metadata and structured data."
+      ],
+      [
+        "Maintain the working site",
+        "I added server-side form validation, spam checking, and a Content Security Policy, and worked on fonts, navigation, and error states."
+      ]
+    ],
+    "result": "214 MB to 25 MB",
+    "result_note": "Combined weight of the 70 re-encoded image assets in the maintenance report. This is an asset-total comparison, not the bytes transferred on one page or a measured load-time improvement.",
+    "lesson": "A polished website is an ongoing system: the images need to arrive, the right pages need to be discoverable, and the contact flow needs to work.",
+    "links": [
+      [
+        "Performance & site care",
+        "https://github.com/digibranders/gkrhospitality-website/pull/92"
+      ],
+      [
+        "Canonical & SEO work",
+        "https://github.com/digibranders/gkrhospitality-website/pull/90"
+      ],
+      [
+        "Content Security Policy",
+        "https://github.com/digibranders/gkrhospitality-website/pull/93"
+      ]
+    ],
+    "order": 6
+  },
+  {
+    "id": "search",
+    "name": "Multimodal Search",
+    "category": "Machine learning",
+    "year": "2026",
+    "tone": "slate",
+    "headline": "Two ways to ask. One search space.",
+    "summary": "Find an image with a sentence or another image, using a shared embedding space.",
+    "role": "Embedding pipeline, retrieval API & interface",
+    "stack": [
+      "CLIP",
+      "ChromaDB",
+      "FastAPI",
+      "React"
+    ],
+    "flow": [
+      "Words or image",
+      "CLIP embedding",
+      "Vector search",
+      "Image results"
+    ],
+    "context": "This application connects a text-or-image query to image retrieval with CLIP embeddings, ChromaDB, a FastAPI backend, and a React interface.",
+    "problem": "Keyword search depends on labels. An image collection becomes more flexible to explore when a query can describe its meaning or simply be another image.",
+    "changes": [
+      [
+        "Shared representation",
+        "I used CLIP to represent text and images in a shared embedding space."
+      ],
+      [
+        "An end-to-end retrieval path",
+        "ChromaDB handles vector retrieval and FastAPI exposes the search flow."
+      ],
+      [
+        "A usable model",
+        "The React interface connects the query to returned results so the model can be explored as an application."
+      ]
+    ],
+    "result": "Text + image retrieval",
+    "result_note": "An application workflow. No retrieval-accuracy or production-scale benchmark is claimed.",
+    "lesson": "The model becomes useful through the whole query-to-result experience, including the interface that lets someone understand what it found.",
+    "links": [
+      [
+        "Explore the source",
+        "https://github.com/jadhavgaurav/multimodal-search-platform"
+      ]
+    ],
+    "order": 7
+  },
+  {
+    "id": "bitling",
+    "name": "Bitling",
+    "category": "Creative engineering",
+    "year": "2026",
+    "tone": "paper",
+    "headline": "A little company for the working day.",
+    "summary": "A desktop companion that gives commits, tests, and deploys a little character.",
+    "role": "Developer-tool interaction & motion",
+    "stack": [
+      "Desktop",
+      "Git",
+      "Native UI",
+      "Interaction"
+    ],
+    "flow": [
+      "Developer event",
+      "Watchers",
+      "Pet behavior",
+      "A small reaction"
+    ],
+    "context": "Bitling is a desktop companion built primarily for macOS. It reacts to commits, test runs, deploys, and Claude Code sessions. A browser demo makes the character easy to try.",
+    "problem": "Developer tools are usually all output and status. I wanted to explore a small, expressive interaction around the events already happening during a working day.",
+    "changes": [
+      [
+        "Events become behavior",
+        "The companion connects developer activity to small moments of character."
+      ],
+      [
+        "Motion that feels coherent",
+        "I worked on pose transitions and character-specific behavior so the reactions feel connected."
+      ],
+      [
+        "A low-friction introduction",
+        "The browser demo lets a visitor try the playful side of the project without installing the desktop application."
+      ]
+    ],
+    "result": "Useful can have a personality",
+    "result_note": "The main desktop implementation targets macOS. The repository also records an unverified Windows port; it is not presented here as a tested release.",
+    "lesson": "Playful interactions deserve the same attention to transitions, responsiveness, and clear feedback as any other interface.",
+    "links": [
+      [
+        "Try the browser demo",
+        "https://jadhavgaurav.github.io/bitling/"
+      ],
+      [
+        "Explore the source",
+        "https://github.com/jadhavgaurav/bitling"
+      ],
+      [
+        "Motion work",
+        "https://github.com/jadhavgaurav/bitling/pull/4"
+      ]
+    ],
+    "order": 8
+  },
+  {
+    "id": "github-mirror",
+    "name": "GitHub Mirror",
+    "category": "Creative engineering",
+    "year": "2026",
+    "tone": "ice",
+    "headline": "A footprint with a visual signature.",
+    "summary": "An alternative view of GitHub activity through deterministic visual signatures.",
+    "role": "Data interpretation & visual exploration",
+    "stack": [
+      "TypeScript",
+      "GitHub data",
+      "Visualization"
+    ],
+    "flow": [
+      "GitHub profile",
+      "Repository activity",
+      "Deterministic mapping",
+      "Visual signature"
+    ],
+    "context": "GitHub Mirror explores a GitHub footprint through repository and activity data, turning those inputs into deterministic visual signatures.",
+    "problem": "A profile contains many traces of a person’s work. A different visual representation can make that footprint interesting to explore beyond a conventional repository list.",
+    "changes": [
+      [
+        "A different representation",
+        "I explored visual signatures built from repository and activity data."
+      ],
+      [
+        "Deterministic mapping",
+        "The signature follows its inputs rather than being a random decoration."
+      ],
+      [
+        "Curiosity as a use case",
+        "The project sits between a developer tool and a visual experiment."
+      ]
+    ],
+    "result": "Activity becomes a signature",
+    "result_note": "A creative exploration, not a score of developer ability or contribution quality.",
+    "lesson": "A visualization is most interesting when its appearance has a clear relationship to the data behind it.",
+    "links": [
+      [
+        "Explore the source",
+        "https://github.com/jadhavgaurav/github-mirror"
+      ]
+    ],
+    "order": 10
+  },
+  {
+    "id": "the-world",
+    "order": 9,
+    "name": "The World",
+    "category": "Creative engineering",
+    "year": "2026",
+    "tone": "slate",
+    "headline": "A GitHub history you can walk through.",
+    "summary": "A playable 3D world derived from repository and commit history, with language districts and people behind the work.",
+    "role": "Data mapping, 3D interaction & accessible presentation",
+    "stack": [
+      "Next.js",
+      "TypeScript",
+      "React Three Fiber",
+      "Three.js"
+    ],
+    "flow": [
+      "GitHub history",
+      "Language districts",
+      "Repository structures",
+      "Explore the record"
+    ],
+    "context": "The World, also called NULL, translates a GitHub history into an explorable place. Repository structures, language districts, and collaborators connect the scene to the record behind it.",
+    "problem": "A long activity history is difficult to understand through a flat repository list. A spatial experience also needs navigation, readable interactions, and a useful alternative for visitors who cannot run WebGL.",
+    "changes": [
+      [
+        "Let the record shape the scene",
+        "Repository structures derive their scale from commit counts and lifespan. Language districts use GitHub language colors and follow the chronology of the underlying history."
+      ],
+      [
+        "Make exploration useful",
+        "Movement, a world map, and nearby interaction prompts let visitors discover repositories, case studies, and collaborators. Touch controls support a different way to navigate."
+      ],
+      [
+        "Keep another path open",
+        "A text fallback presents the work when WebGL is unavailable. The portfolio uses recorded gameplay for its lightweight preview and starts the full game only when requested."
+      ]
+    ],
+    "result": "History becomes a place",
+    "result_note": "A creative representation of the repository’s recorded dataset. It is not a live count of current GitHub activity or a measure of developer ability.",
+    "lesson": "An unusual interface works best when its shapes have a reason and visitors still have a direct, accessible route to the content.",
+    "links": [
+      [
+        "Explore the source",
+        "https://github.com/jadhavgaurav/the-world"
+      ],
+      [
+        "How the world is built",
+        "https://github.com/jadhavgaurav/the-world/blob/f1b9d4cab55b329c93bc601cd60e5fc169c9d540/README.md"
+      ],
+      [
+        "Play The World",
+        "https://gaurav-portfolio-theta.vercel.app/"
+      ]
+    ]
+  }
+]
