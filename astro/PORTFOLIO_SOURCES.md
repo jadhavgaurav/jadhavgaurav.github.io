@@ -13,6 +13,6 @@ Audited against GitHub's public repository API and the live GitHub Pages HTML on
 
 The current GitHub Pages homepage matched the local source at the pinned commit after CRLF/LF normalization. GitHub's repository homepage metadata currently points to the contact API; that metadata is not the website's actual URL. The API lives in `contact-service/` of the main portfolio source and is deployed separately.
 
-The Astro source lives in this independent `portfolio/` checkout. It was initially based on a separate Sites snapshot that omitted newer interactions. That snapshot is superseded as the migration's homepage baseline. Its additional evidence-backed case studies, contribution index, and timeline remain incorporated.
+The canonical Astro source lives in `astro/` within `jadhavgaurav/jadhavgaurav.github.io` on `main`. Vercel project `iamgaurav-portfolio` builds that directory and serves https://iamgaurav-portfolio.vercel.app/. An earlier independent Sites snapshot omitted newer interactions; it is superseded as the migration's homepage baseline. Its additional evidence-backed case studies, contribution index, and timeline remain incorporated.
 
 Intentional extensions to the verified homepage: shareable case-study routes instead of project dialogs; an AlsoNotify entry alongside OyeChats and CleanStart; a complete work archive, open-source index, and journey. Employment/ownership labels are not used to classify projects. Each story describes the author's contribution and retains public evidence, without implying sole authorship of a whole product.
