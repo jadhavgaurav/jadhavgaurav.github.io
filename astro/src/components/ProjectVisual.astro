@@ -8,6 +8,13 @@ const { project } = Astro.props;
     <span class="eyebrow">BITLING / DEVELOPER COMPANION</span>
     <img class="study-bitling" src="/assets/bitling-hero.png" width="600" height="600" alt="Bitling, a cheerful desktop robot" loading="lazy" />
   </div>
+) : project.id === 'the-world' ? (
+  <div class="study-visual study-world">
+    <img src="/assets/the-world-poster.jpg" alt="The repository world, captured from the playable 3D project" width="1280" height="720" loading="lazy" />
+    <div class="visual-top"><span>THE WORLD</span><span>RECORDED GAMEPLAY</span></div>
+    <strong>History becomes<br /><em>a place.</em></strong>
+    <div class="visual-bottom"><span>CREATIVE ENGINEERING</span><span>{project.year}</span></div>
+  </div>
 ) : (
   <div class={`study-visual tone-${project.tone}`}>
     <div class="visual-top"><span>{project.name.toUpperCase()}</span><span>CONCEPTUAL FLOW</span></div>

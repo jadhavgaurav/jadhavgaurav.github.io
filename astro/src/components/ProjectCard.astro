@@ -1,16 +1,17 @@
 ---
 import ProjectVisual from './ProjectVisual.astro';
-import type { Project } from '../lib/portfolio';
+import { projectArea, type Project } from '../lib/portfolio';
 interface Props { project: Project; }
 const { project } = Astro.props;
 const href = `/projects/${project.id}.html`;
 ---
-<article class="study-card">
+<article class="study-card" data-study data-area={projectArea(project.id)}>
   <ProjectVisual project={project} />
   <div class="study-card-copy">
     <div class="card-meta"><span>{project.category}</span><span>{project.year}</span></div>
     <h3><a href={href}>{project.name}</a></h3>
     <p>{project.summary}</p>
+    <div class="study-outcome"><span>The outcome</span><strong>{project.result}</strong></div>
     <a class="study-link" href={href}>Read the story <span aria-hidden="true">+</span></a>
   </div>
 </article>

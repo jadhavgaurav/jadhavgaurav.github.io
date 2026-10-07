@@ -1,3 +1,8 @@
+---
+import { getProjects, getContributions, contributionStats } from '../lib/portfolio';
+const projects = await getProjects();
+const stats = contributionStats(await getContributions());
+---
 <section class="hero wrap" id="top" aria-labelledby="hero-title">
       <div class="hero-topline"><span class="eyebrow">Independent thinking. Useful things.</span><span class="location">Based in Mumbai, India <span aria-hidden="true">·</span> <time id="mumbai-time">IST</time></span></div>
       <div class="hero-layout">
@@ -14,5 +19,9 @@
           <div class="training-progress" aria-hidden="true"><span id="training-progress"></span></div>
         </figure>
       </div>
-      <div class="hero-bottom"><span>Retrieval & agents</span><span>Full-stack products</span><span>Systems that hold up</span><a href="#work" class="scroll-note">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a></div>
+      <nav class="hero-paths" aria-label="Explore the portfolio">
+        <a href="/work.html"><span class="path-number">01</span><span><strong>Projects & products</strong><small>{projects.length} stories. From idea to working system.</small></span><span class="path-arrow" aria-hidden="true">↗</span></a>
+        <a href="/open-source.html"><span class="path-number">02</span><span><strong>Contributions upstream</strong><small>{stats.merged} merged PRs across {stats.projects} projects.</small></span><span class="path-arrow" aria-hidden="true">↗</span></a>
+        <a href="/journey.html"><span class="path-number">03</span><span><strong>The story so far</strong><small>2023–2026. Follow the thread.</small></span><span class="path-arrow" aria-hidden="true">↗</span></a>
+      </nav>
     </section>

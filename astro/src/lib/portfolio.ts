@@ -10,6 +10,12 @@ export const snapshotLabel = new Intl.DateTimeFormat('en-GB', {
 export type Project = CollectionEntry<'projects'>['data'] & { id: string };
 export type Contribution = CollectionEntry<'contributions'>['data'];
 
+export function projectArea(id: string) {
+  if (['oyechats', 'victus', 'search'].includes(id)) return 'AI & systems';
+  if (['bitling', 'github-mirror', 'the-world'].includes(id)) return 'Experiments';
+  return 'Products';
+}
+
 export async function getProjects(): Promise<Project[]> {
   return (await getCollection('projects'))
     .map(({ id, data }) => ({ ...data, id }))

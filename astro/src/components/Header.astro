@@ -8,11 +8,12 @@ const links = [
 ];
 ---
 <a class="skip-link" href="#main">Skip to content</a>
+<div class="header-shell">
 <header class="site-header wrap">
-  <a class="wordmark" href={home ? '#top' : '/'} aria-label="Gaurav Jadhav, home">gj<span>.</span></a>
-  <a class="header-name" href={home ? '#top' : '/'}>Gaurav Jadhav<span>AI & product engineer</span></a>
+  <a class="brand" href={home ? '#top' : '/'} aria-label="Gaurav Jadhav, home"><span class="wordmark">gj<span>.</span></span><span class="header-name">Gaurav Jadhav<span>AI & product engineer</span></span></a>
   <nav aria-label="Main navigation">
-    {home ? <><a href="#work">Work</a><a href="#practice">Practice</a><a href="#about">About</a></> : links.map(link => <a href={link.href} aria-current={active === link.label ? 'page' : undefined}>{link.label}</a>)}
+    {links.map(link => <a href={link.href} aria-current={active === link.label ? 'page' : undefined}>{link.label}</a>)}
     <a class="nav-contact" href={home ? '#contact' : '/#contact'}>Let's talk<span class="link-dot" aria-hidden="true"></span></a>
   </nav>
 </header>
+</div>

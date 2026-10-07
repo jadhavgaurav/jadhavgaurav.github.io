@@ -27,14 +27,15 @@ const { project, following } = Astro.props;
         <div><dt>My focus</dt><dd>{project.role}</dd></div>
         <div><dt>Working with</dt><dd>{project.stack.join(' · ')}</dd></div>
       </dl>
+      <div class="case-highlight"><div><span class="section-index">THE OUTCOME</span><strong>{project.result}</strong></div><a class="study-link" href="#contribution">Explore my contribution <span aria-hidden="true">↓</span></a></div>
     </section>
     <ProjectVisual project={project} />
     <div class="case-layout">
-      <aside class="case-contents">
+      <nav class="case-contents" aria-label="In this story">
         <span class="eyebrow">IN THIS STORY</span>
         <a href="#context">The context</a><a href="#contribution">My contribution</a>
         <a href="#outcome">The outcome</a><a href="#evidence">Explore the evidence</a>
-      </aside>
+      </nav>
       <div class="case-narrative">
         <section class="case-context" id="context">
           <span class="section-index">01 / THE CONTEXT</span>
