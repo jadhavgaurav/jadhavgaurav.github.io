@@ -1,4 +1,45 @@
-<section class="practice-section" id="practice" aria-labelledby="practice-title"><div class="wrap"><div class="section-heading"><div><span class="section-index">02 / ENGINEERING IN PRACTICE</span><h2 id="practice-title">The work behind<br><em>the working product.</em></h2></div><p>Some of the most valuable changes<br>never become a feature announcement.</p></div><div class="practice-list">
-      <article class="practice-item"><div class="practice-label"><span class="eyebrow">OYECHATS / AI ENGINEERING</span><h3>Better answers start<br>before the answer.</h3></div><div class="practice-body"><p>I traced a relevance gate that was rejecting useful knowledge-base content, consolidated duplicated RAG pipelines, and moved qualification work onto a durable queue.</p><div class="result"><strong aria-label="15,233 down to 8,120">15,233 <span aria-hidden="true">→</span> 8,120</strong><span>tokens in one assembled prompt,<br>as documented in the remediation PR</span></div><div class="inline-links"><a href="https://github.com/digibranders/oye-chats-platform/pull/450" target="_blank" rel="noopener noreferrer">Retrieval diagnosis</a><a href="https://github.com/digibranders/oye-chats-platform/pull/455" target="_blank" rel="noopener noreferrer">Prompt & durability work</a></div><a href="/projects/oyechats.html">Read the full story</a></div></article>
-      <article class="practice-item"><div class="practice-label"><span class="eyebrow">CLEANSTART / PRODUCT ENGINEERING</span><h3>Fewer requests.<br>Correct timing.</h3></div><div class="practice-body"><p>I batched CMS relationship lookups and corrected cache invalidation that could happen before a database transaction committed.</p><div class="result"><strong aria-label="Approximately 75 down to 2">~75 <span aria-hidden="true">→</span> 2</strong><span>relationship requests for the<br>documented 25-row list view</span></div><div class="inline-links"><a href="https://github.com/digibranders/cleanstart-web/pull/279" target="_blank" rel="noopener noreferrer">CMS performance</a><a href="https://github.com/digibranders/cleanstart-web/pull/276" target="_blank" rel="noopener noreferrer">Cache correctness</a></div><a href="/projects/cleanstart.html">Read the full story</a></div></article>
-    <article class="practice-item"><div class="practice-label"><span class="eyebrow">ALSONOTIFY / PRODUCT SYSTEMS</span><h3>Trust is a<br>product feature.</h3></div><div class="practice-body"><p>Authentication, safer email rendering, and reporting rules that keep the interface and exported PDF in agreement.</p><div class="inline-links"><a href="/projects/alsonotify.html">Inside AlsoNotify</a><a href="/work.html">More engineering stories</a></div></div></article></div></div></section>
+---
+const stories = [
+  {
+    name: 'OyeChats', area: 'AI ENGINEERING', href: '/projects/oyechats.html',
+    headline: 'Better answers start before the answer.',
+    description: 'Retrieval diagnosis, a consolidated RAG pipeline, and durable qualification jobs.',
+    result: '15,233 → 8,120', note: 'tokens in one assembled prompt, documented in the remediation PR',
+    evidence: [['Retrieval diagnosis', 'https://github.com/digibranders/oye-chats-platform/pull/450'], ['Prompt & durability', 'https://github.com/digibranders/oye-chats-platform/pull/455']],
+  },
+  {
+    name: 'CleanStart', area: 'PRODUCT ENGINEERING', href: '/projects/cleanstart.html',
+    headline: 'Fewer requests. Correct timing.',
+    description: 'Batched CMS lookups and cache invalidation that waits for the transaction to commit.',
+    result: '~75 → 2', note: 'relationship requests in the documented 25-row list view',
+    evidence: [['CMS performance', 'https://github.com/digibranders/cleanstart-web/pull/279'], ['Cache correctness', 'https://github.com/digibranders/cleanstart-web/pull/276']],
+  },
+  {
+    name: 'AlsoNotify', area: 'PRODUCT SYSTEMS', href: '/projects/alsonotify.html',
+    headline: 'Trust is a product feature.',
+    description: 'Authentication, safer email rendering, and reporting rules shared by the interface and exported PDF.',
+    result: 'One KPI definition', note: 'consistent reporting across the interface and PDF', evidence: [],
+  },
+];
+---
+<section class="practice-section" id="practice" aria-labelledby="practice-title">
+  <div class="wrap">
+    <div class="section-heading">
+      <div><span class="section-index">02 / ENGINEERING IN PRACTICE</span><h2 id="practice-title">Small decisions.<br /><em>Real impact.</em></h2></div>
+      <p>The work that makes a product<br />faster, safer, and more dependable.</p>
+    </div>
+    <div class="practice-list">
+      {stories.map(story => (
+        <article class="practice-item">
+          <div class="practice-label"><span class="eyebrow">{story.area}</span><h3>{story.name}</h3><p class="practice-lede">{story.headline}</p></div>
+          <div class="practice-body">
+            <p>{story.description}</p>
+            <div class="result"><strong>{story.result}</strong><span>{story.note}</span></div>
+            <a class="study-link" href={story.href}>Read the story <span aria-hidden="true">↗</span></a>
+            {story.evidence.length > 0 && <details class="practice-evidence"><summary>Public evidence <span aria-hidden="true">+</span></summary><div class="inline-links">{story.evidence.map(([label, url]) => <a href={url} target="_blank" rel="noopener noreferrer">{label} ↗</a>)}</div></details>}
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

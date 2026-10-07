@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageIntro from '../components/PageIntro.astro';
 import ProjectCard from '../components/ProjectCard.astro';
-import { getProjects, getRepositories, repositoryCategory, snapshotLabel, GITHUB } from '../lib/portfolio';
+import { getProjects, getRepositories, projectArea, repositoryCategory, snapshotLabel, GITHUB } from '../lib/portfolio';
 const projects = await getProjects();
 const repositories = await getRepositories();
 const years = [...new Set(repositories.map(repo => repo.created_at.slice(0,4)))];
@@ -10,8 +10,17 @@ const years = [...new Set(repositories.map(repo => repo.created_at.slice(0,4)))]
 <BaseLayout title="Work" description="Project stories and a complete public repository archive." route="/work.html" active="Work">
   <div class="wrap">
     <PageIntro kicker="THE WORK / 2023–2026" description="Products, engineering stories, visual experiments, and the earlier work that led here.">An evolving<br /><em>body of work.</em></PageIntro>
-    <div class="work-count"><span>{projects.length} project stories</span><a href="#repository-archive">{repositories.length} public repositories in the archive</a></div>
-    <div class="all-studies">{projects.map(project => <ProjectCard project={project} />)}</div>
+    <nav class="work-count" aria-label="Work collections"><a href="#project-stories">Project stories <span>{projects.length}</span></a><a href="#repository-archive">Repository archive <span>{repositories.length}</span> <span aria-hidden="true">↓</span></a></nav>
+    <section id="project-stories" aria-label="Project stories">
+      <h2 class="visually-hidden">Project stories</h2>
+      <div class="story-filters" data-story-controls hidden>
+        <div role="group" aria-label="Filter project stories">
+          {['All work', 'AI & systems', 'Products', 'Experiments'].map(area => <button type="button" data-story-area={area} aria-pressed={area === 'All work' ? 'true' : 'false'}>{area}<span>{area === 'All work' ? projects.length : projects.filter(project => projectArea(project.id) === area).length}</span></button>)}
+        </div>
+        <p id="story-status" role="status" aria-live="polite">Showing all {projects.length} stories</p>
+      </div>
+      <div class="all-studies">{projects.map(project => <ProjectCard project={project} />)}</div>
+    </section>
     <section class="repository-archive" id="repository-archive">
       <div class="section-heading">
         <div><span class="section-index">THE COMPLETE REPOSITORY ARCHIVE</span><h2>Keep the<br /><em>earlier chapters.</em></h2></div>

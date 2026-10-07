@@ -1,4 +1,22 @@
 // Small progressive enhancements. Every story and contribution is static HTML.
+const storyControls = document.querySelector('[data-story-controls]');
+if (storyControls) {
+  const stories = [...document.querySelectorAll('[data-study]')];
+  const buttons = [...storyControls.querySelectorAll('[data-story-area]')];
+  storyControls.hidden = false;
+  for (const button of buttons) button.addEventListener('click', () => {
+    const area = button.dataset.storyArea;
+    let visible = 0;
+    for (const story of stories) {
+      story.hidden = area !== 'All work' && story.dataset.area !== area;
+      visible += Number(!story.hidden);
+    }
+    for (const item of buttons) item.setAttribute('aria-pressed', String(item === button));
+    document.querySelector('#story-status').textContent = area === 'All work'
+      ? `Showing all ${stories.length} stories` : `${visible} stories · ${area}`;
+  });
+}
+
 const repoForm = document.querySelector('[data-repo-controls]');
 if (repoForm) {
   repoForm.hidden = false;

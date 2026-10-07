@@ -69,9 +69,3 @@ function time(){document.querySelector('#mumbai-time').textContent=new Intl.Date
 time();setInterval(time,60000);document.querySelector('#year').textContent=new Date().getFullYear();
 
 document.querySelector('#copy-email').addEventListener('click',async()=>{const status=document.querySelector('#copy-status');try{await navigator.clipboard.writeText('hello@iamgaurav.online');status.textContent='Email copied.';}catch{status.textContent='hello@iamgaurav.online';}});
-
-if(!reducedMotion.matches){
-  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}}),{threshold:.08});
-  document.documentElement.classList.add('motion-ready');
-  document.querySelectorAll('.project,.practice-item,.curiosity-card,.about-title,.about-copy').forEach(el=>{el.classList.add('reveal');observer.observe(el);});
-}
