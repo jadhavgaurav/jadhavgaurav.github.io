@@ -15,9 +15,11 @@
   <link rel="preload" href="assets/fonts/SpaceGrotesk.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="styles.css?v=20261007-search-motion">
   <link rel="stylesheet" href="search-motion.css?v=1">
+  <link rel="stylesheet" href="world-preview.css?v=1">
   <script type="module" src="app.js"></script>
   <script type="module" src="bitling-preview.js?v=1"></script>
   <script type="module" src="search-motion.js?v=1"></script>
+  <script type="module" src="world-preview.js?v=1"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -102,11 +104,30 @@
             <p class="bitling-event-status" id="bitling-status" role="status">Real engine. Simulated developer events. Starts muted.</p>
           </div>
           <div class="bitling-links"><a class="text-link" href="https://jadhavgaurav.github.io/bitling/" target="_blank" rel="noopener noreferrer">Explore the full project ↗</a><a class="text-link" href="https://github.com/jadhavgaurav/bitling" target="_blank" rel="noopener noreferrer">Source</a></div>
-        </article><article class="curiosity-card"><span class="eyebrow">CREATIVE ENGINEERING</span><h3>GitHub Mirror</h3><p>A different way to explore a GitHub footprint, with deterministic visual signatures built from repository and activity data.</p><a class="text-link" href="https://github.com/jadhavgaurav/github-mirror" target="_blank" rel="noopener noreferrer">Explore the source</a></article></div></section>
+        </article><article class="curiosity-card world-card" id="the-world">
+          <div class="world-intro"><span class="eyebrow">CREATIVE ENGINEERING</span><h3>The World</h3><p>My GitHub profile, as a playable 3D world. Walk through repositories, explore language districts, and meet the collaborators behind the commits.</p></div>
+          <div class="world-preview" id="world-preview">
+            <div class="world-stage-bar"><span><i aria-hidden="true"></i> null / the-world</span><button id="world-preview-toggle" type="button" aria-label="Pause gameplay preview" aria-pressed="false">Pause</button></div>
+            <div class="world-stage">
+              <video id="world-video" muted loop playsinline preload="none" poster="assets/the-world-poster.jpg" aria-label="Recorded gameplay: a camera sweep through the repository world"><source src="assets/the-world-preview.mp4" type="video/mp4"></video>
+              <div class="world-stage-shade" aria-hidden="true"></div>
+              <span class="world-recording-label">RECORDED GAMEPLAY</span>
+              <button class="world-launch" id="world-launch" type="button" aria-haspopup="dialog">Enter the world <span aria-hidden="true">↗</span></button>
+            </div>
+            <div class="world-controls" aria-label="Desktop game controls"><span><kbd>WASD</kbd> Move</span><span><kbd>Drag</kbd> Look</span><span><kbd>E</kbd> Explore</span></div>
+            <p class="world-caption">Repositories become places. Your curiosity becomes the controller.</p>
+          </div>
+          <div class="world-links"><a class="text-link" href="https://gaurav-portfolio-theta.vercel.app/" target="_blank" rel="noopener noreferrer">Play in a new tab ↗</a><a class="text-link" href="https://github.com/jadhavgaurav/the-world" target="_blank" rel="noopener noreferrer">Source</a></div>
+        </article></div></section>
     <section class="about-section wrap" id="about" aria-labelledby="about-title"><div class="about-title"><span class="section-index">04 / A BIT ABOUT ME</span><h2 id="about-title">An engineer.<br>A builder.<br><em>Still curious.</em></h2></div><div class="about-copy"><p class="large-copy">I like the space between a promising idea and a product someone can actually rely on.</p><p>My background is in computer engineering and data science. Today, I work across retrieval, agents, APIs, and interfaces at Alsonotify / Digibranders in Mumbai.</p><p>I'll happily get into model behavior or a stubborn cache bug. I also believe a small, playful interaction can be worth building well.</p><div class="toolkit"><h3>My working toolkit</h3><p>Python · TypeScript · React · Next.js · FastAPI · Node.js · PostgreSQL · Redis · Docker · AWS</p></div><details class="background"><summary>Education & earlier work <span aria-hidden="true">+</span></summary><div><p><strong>B.E. Computer Engineering</strong><br>University of Mumbai, 2024</p><p><strong>Data Science & Analytics with AI</strong><br>IT Vedant with IBM, 2024–2025</p><p><strong>Data Science Intern</strong><br>Code B Solutions, February–April 2025</p><a href="https://ijream.org/papers/IJREAMV10SSJ2411.pdf" target="_blank" rel="noopener noreferrer">Published research on blockchain voting systems</a></div></details></div></section>
     <section class="oss-section wrap" id="open-source" aria-labelledby="oss-title"><span class="section-index">ALONG THE WAY</span><div class="oss-layout"><h2 id="oss-title">Small fixes.<br>Shared upstream.</h2><div class="oss-links"><a href="https://github.com/mnfst/llm-gateway/pull/2772" target="_blank" rel="noopener noreferrer"><strong>llm-gateway</strong><span>Preserving Anthropic server-tool parameters.</span><span class="oss-plus" aria-hidden="true">+</span></a><a href="https://github.com/readest/readest/pull/5905" target="_blank" rel="noopener noreferrer"><strong>Readest</strong><span>Making multi-device file sync converge.</span><span class="oss-plus" aria-hidden="true">+</span></a><a href="https://github.com/jgm/pandoc/pull/11877" target="_blank" rel="noopener noreferrer"><strong>Pandoc</strong><span>Restoring a missing blockquote bar in ANSI output.</span><span class="oss-plus" aria-hidden="true">+</span></a></div></div></section>
     <footer class="contact-section" id="contact"><div class="wrap"><div class="contact-topline"><span class="section-index">HAVE SOMETHING IN MIND?</span><span>MUMBAI, INDIA · OPEN TO CONVERSATIONS</span></div><h2>Let's make<br><em>something useful.</em></h2><div class="contact-actions"><a class="button button-white" href="mailto:gaurav.vjadhav01@gmail.com">Say hello <span class="button-mark" aria-hidden="true">+</span></a><button class="copy-email" id="copy-email">Copy email <span aria-hidden="true">⧉</span></button><span class="copy-status" id="copy-status" role="status" aria-live="polite"></span></div><div class="footer-bottom"><span>© <span id="year">2026</span> Gaurav Jadhav</span><div><a href="https://github.com/jadhavgaurav" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/gauravjadhav007" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="#top">Back to top</a></div><span>Thoughtfully built. Still evolving.</span></div></div></footer>
   </main>
   <dialog class="case-dialog" id="case-dialog" aria-labelledby="case-title"><div class="dialog-shell"><button class="dialog-close" id="case-close" aria-label="Close project details">Close <span aria-hidden="true">×</span></button><div id="case-content"></div></div></dialog>
+  <dialog class="world-dialog" id="world-dialog" aria-labelledby="world-dialog-title" aria-describedby="world-dialog-help">
+    <div class="world-dialog-header"><div><h2 id="world-dialog-title">The World <span>/ NULL</span></h2><p id="world-dialog-help">Choose Enter the World to play. WASD to move, drag to look.</p></div><button id="world-close" type="button" aria-label="Close The World" autofocus>Close <span aria-hidden="true">×</span></button></div>
+    <div class="world-game-frame"><iframe id="world-game" title="The World: a playable 3D world generated from Gaurav Jadhav's GitHub history" allow="fullscreen" referrerpolicy="strict-origin"></iframe></div>
+    <div class="world-dialog-footer"><span id="world-game-status" role="status">Loading the world...</span><a href="https://gaurav-portfolio-theta.vercel.app/" target="_blank" rel="noopener noreferrer">Open in a new tab ↗</a></div>
+  </dialog>
 </body>
 </html>
