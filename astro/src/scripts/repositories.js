@@ -25,4 +25,3 @@ if (repoForm) {
   repoForm.addEventListener('reset', () => requestAnimationFrame(filter));
   filter();
 }
-
