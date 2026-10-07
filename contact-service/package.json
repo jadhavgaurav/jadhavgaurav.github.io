@@ -1,0 +1,7 @@
+{
+  "name": "gaurav-contact-service",
+  "private": true,
+  "type": "module",
+  "engines": { "node": "24.x" },
+  "scripts": { "test": "node --test" }
+}
