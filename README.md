@@ -19,6 +19,9 @@ Open `http://localhost:4173`. The site is plain HTML, CSS, and JavaScript module
 - `bitling-preview.js`: click-to-load integration with Bitling's real public browser engine, simulated developer events, and visibility-aware pause controls.
 - `search-motion.css`, `search-motion.js`: animated SVG explanation of a shared text/image embedding space, with pause and reduced-motion support.
 - `world-preview.css`, `world-preview.js`: recorded gameplay preview and click-to-load dialog for The World.
+- `contact-console.css`, `contact-console.js`: terminal-inspired contact form with accessible validation and a receipt after API acceptance.
+- `contact-config.js`: public endpoint URL only. Until connected, submission reports that no message was sent and offers direct email.
+- `contact-service/`: separate Vercel email endpoint, Brevo email templates, setup instructions, and tests. GitHub Pages cannot execute this backend.
 - `assets/`: bundled fonts, original Bitling artwork, and recorded The World gameplay, with font licenses.
 - `404.html`, `robots.txt`, and `sitemap.xml`: public site navigation and indexing.
 
