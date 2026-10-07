@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageIntro from '../components/PageIntro.astro';
+import ContributionStats from '../components/ContributionStats.astro';
+import ExternalLink from '../components/ExternalLink.astro';
+import { getContributions, contributionRepo, contributionStats, GITHUB, type Contribution } from '../lib/portfolio';
+const contributions = await getContributions();
+const stats = contributionStats(contributions);
+const grouped = new Map<string, Contribution[]>();
+for (const pr of contributions) {
+  const repo = contributionRepo(pr.url);
+  grouped.set(repo, [...(grouped.get(repo) ?? []), pr]);
+}
+const preferred = ['oras-project/oras-go','readest/readest','mnfst/llm-gateway','jgm/pandoc','phoenixframework/phoenix','mockk/mockk'];
+const order = [...preferred, ...[...grouped.keys()].filter(repo => !preferred.includes(repo)).sort((a,b) => a.toLowerCase().localeCompare(b.toLowerCase()))];
+const groups = order.map(repo => {
+  const entries = grouped.get(repo)!;
+  const merged = entries.filter(pr => pr.status === 'merged').length;
+  const open = entries.length - merged;
+  return { repo, name: repo.split('/')[1], entries, label: [merged ? `${merged} merged` : '', open ? `${open} open` : ''].filter(Boolean).join(' · ') };
+});
+---
+<BaseLayout title="Open source" description="Merged and open contributions across AI tooling, readers, infrastructure, and language tools." route="/open-source.html" active="Open source">
+  <div class="wrap">
+    <PageIntro kicker="OPEN SOURCE / SHARED UPSTREAM" description="I follow a problem into unfamiliar code, make a focused change, and leave a trail someone else can review.">Small fixes.<br /><em>Long reach.</em></PageIntro>
+    <ContributionStats verified />
+    <p class="oss-snapshot">Open requests are still under review. Statuses reflect this snapshot; each link opens the current pull request. <ExternalLink href="https://github.com/pulls?q=is%3Apr+author%3Ajadhavgaurav+-org%3Adigibranders+-user%3Ajadhavgaurav">Check the live GitHub activity</ExternalLink></p>
+    <form class="archive-controls" data-oss-controls role="search" hidden>
+      <label>Find a contribution<input id="oss-search" type="search" placeholder="Search project or change" autocomplete="off" /></label>
+      <div class="status-filter" role="group" aria-label="Pull request status">
+        <button type="button" data-oss-state="all" aria-pressed="true">All ({contributions.length})</button>
+        <button type="button" data-oss-state="merged" aria-pressed="false">Merged ({stats.merged})</button>
+        <button type="button" data-oss-state="open" aria-pressed="false">Open ({stats.open})</button>
+      </div>
+      <button type="reset">Reset</button>
+    </form>
+    <p class="filter-status" id="oss-status" role="status" aria-live="polite">{contributions.length} pull requests across {groups.length} projects</p>
+    <div class="contribution-index">
+      {groups.map(group => (
+        <section class="oss-repo" data-oss-group id={group.name.toLowerCase()}>
+          <div class="oss-repo-heading">
+            <h2><ExternalLink href={`${GITHUB}${group.repo}`}>{group.name}</ExternalLink></h2>
+            <span>{group.repo}<br />{group.label}</span>
+          </div>
+          <div>
+            {group.entries.map(pr => (
+              <a class="contribution-row" data-pr data-state={pr.status} href={pr.url} target="_blank" rel="noopener noreferrer">
+                <span class={`state state-${pr.status}`}>{pr.status === 'merged' ? 'Merged' : 'Open'}</span>
+                <span>{pr.title}</span><span class="pr-number">#{pr.url.split('/').at(-1)}</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+    <p class="empty-results" id="oss-empty" hidden>No contributions match. Try a different search or status.</p>
+  </div>
+</BaseLayout>
+<script>import '../scripts/contributions.js';</script>

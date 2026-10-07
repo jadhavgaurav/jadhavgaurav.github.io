@@ -1,0 +1,19 @@
+---
+const milestones = [
+  ['2023', 'Learning by building', 'Java, web experiments & voice assistants'],
+  ['2024', 'Computer engineering & research', 'Graduation, blockchain voting & data science'],
+  ['2025', 'Models become applications', 'Internship, computer vision & early agents'],
+  ['2026', 'Products, systems & upstream', 'AI engineering, creative tools & open source'],
+];
+---
+<section class="journey-teaser wrap" aria-labelledby="journey-teaser-title">
+  <div>
+    <span class="section-index">05 / THE THREAD THROUGH IT ALL</span>
+    <h2 id="journey-teaser-title">A few years.<br /><em>A lot of curiosity.</em></h2>
+    <p>From early Java projects and a voice assistant to data science, useful AI, and contributions upstream.</p>
+    <a class="study-link" href="/journey.html">Follow the journey <span aria-hidden="true">+</span></a>
+  </div>
+  <ol class="journey-rail">
+    {milestones.map(([year, title, description]) => <li><span>{year}</span><strong>{title}</strong><p>{description}</p></li>)}
+  </ol>
+</section>

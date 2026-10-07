@@ -1,0 +1,22 @@
+---
+import type { Project } from '../lib/portfolio';
+interface Props { project: Project; }
+const { project } = Astro.props;
+---
+{project.id === 'bitling' ? (
+  <div class="study-visual tone-paper">
+    <span class="eyebrow">BITLING / DEVELOPER COMPANION</span>
+    <img class="study-bitling" src="/assets/bitling-hero.png" width="600" height="600" alt="Bitling, a cheerful desktop robot" loading="lazy" />
+  </div>
+) : (
+  <div class={`study-visual tone-${project.tone}`}>
+    <div class="visual-top"><span>{project.name.toUpperCase()}</span><span>CONCEPTUAL FLOW</span></div>
+    <div class="flow-composition">
+      <span class="flow-caption">{project.category}</span>
+      <ol class="system-flow">
+        {project.flow.map((step, index) => <li><span class="flow-index">0{index + 1}</span><span>{step}</span></li>)}
+      </ol>
+    </div>
+    <div class="visual-bottom"><span>{project.year}</span><span>CONTEXT / DECISIONS / DETAILS</span></div>
+  </div>
+)}

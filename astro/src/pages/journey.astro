@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageIntro from '../components/PageIntro.astro';
+import ExternalLink from '../components/ExternalLink.astro';
+import { chapters } from '../data/journey';
+---
+<BaseLayout title="The journey" description="Education, research, early experiments, products, and open-source work from 2023 onward." route="/journey.html" active="Journey">
+  <div class="wrap">
+    <PageIntro kicker="THE JOURNEY / 2023–2026" description="Computer engineering, data science, product systems, and open source. The earlier work belongs in the story too.">One curious thread.<br /><em>Many ways to build.</em></PageIntro>
+    <div class="timeline">
+      {chapters.map(chapter => (
+        <article class="timeline-chapter">
+          <div class="timeline-year">{chapter.year}</div>
+          <div>
+            <h2>{chapter.title}</h2>
+            {chapter.paragraphs.map(paragraph => <p>{paragraph}</p>)}
+            <div class="evidence-links">
+              {chapter.links.map(([label, href]) => href.startsWith('https:') ? <ExternalLink href={href}>{label}</ExternalLink> : <a href={href}>{label}</a>)}
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+    <p class="timeline-note">The project archive uses repository creation dates. These chapters combine those public records with education and experience milestones; a repository date is not a project completion date.</p>
+    <a class="archive-cta" href="/work.html">Explore the complete work archive <span aria-hidden="true">+</span></a>
+  </div>
+</BaseLayout>

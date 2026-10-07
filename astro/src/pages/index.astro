@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import SelectedWork from '../components/SelectedWork.astro';
+import EngineeringImpact from '../components/EngineeringImpact.astro';
+import Curiosity from '../components/Curiosity.astro';
+import About from '../components/About.astro';
+import OpenSourceOverview from '../components/OpenSourceOverview.astro';
+import JourneyTeaser from '../components/JourneyTeaser.astro';
+import Contact from '../components/Contact.astro';
+import '../styles/search-motion.css';
+import '../styles/world-preview.css';
+import '../styles/contact-console.css';
+---
+<BaseLayout title="Gaurav Jadhav" description="Gaurav Jadhav builds AI products and the systems around them. Explore selected work in agents, retrieval, product engineering, and creative developer tools." route="/" home>
+  <Hero />
+  <SelectedWork />
+  <EngineeringImpact />
+  <Curiosity />
+  <About />
+  <OpenSourceOverview />
+  <JourneyTeaser />
+  <Contact />
+</BaseLayout>
+<script>
+  import '../scripts/home.js';
+  import '../scripts/bitling-preview.js';
+  import '../scripts/search-motion.js';
+  import '../scripts/world-preview.js';
+  import '../scripts/contact-console.js';
+</script>

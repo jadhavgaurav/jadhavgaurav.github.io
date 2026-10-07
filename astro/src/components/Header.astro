@@ -1,0 +1,18 @@
+---
+interface Props { active?: 'Work' | 'Open source' | 'Journey'; home?: boolean; }
+const { active, home = false } = Astro.props;
+const links = [
+  { label: 'Work', href: '/work.html' },
+  { label: 'Open source', href: '/open-source.html' },
+  { label: 'Journey', href: '/journey.html' },
+];
+---
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap">
+  <a class="wordmark" href={home ? '#top' : '/'} aria-label="Gaurav Jadhav, home">gj<span>.</span></a>
+  <a class="header-name" href={home ? '#top' : '/'}>Gaurav Jadhav<span>AI & product engineer</span></a>
+  <nav aria-label="Main navigation">
+    {home ? <><a href="#work">Work</a><a href="#practice">Practice</a><a href="#about">About</a></> : links.map(link => <a href={link.href} aria-current={active === link.label ? 'page' : undefined}>{link.label}</a>)}
+    <a class="nav-contact" href={home ? '#contact' : '/#contact'}>Let's talk<span class="link-dot" aria-hidden="true"></span></a>
+  </nav>
+</header>

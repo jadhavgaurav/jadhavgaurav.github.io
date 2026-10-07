@@ -1,0 +1,30 @@
+---
+import ContributionStats from './ContributionStats.astro';
+import { getContributions, contributionRepo } from '../lib/portfolio';
+const merged = (await getContributions()).filter(pr => pr.status === 'merged');
+const highlights = [
+  { id: 'oras-go', name: 'oras-go', description: 'Bounded concurrency, pooled buffers, and fewer repeated allocations.' },
+  { id: 'readest', name: 'Readest', description: 'Multi-device sync, RTL controls, and a more dependable reading experience.' },
+  { id: 'llm-gateway', name: 'llm-gateway', description: 'Preserving tool parameters and consistent request behavior.' },
+  { id: 'pandoc', name: 'Pandoc', description: 'A small ANSI formatting fix in a widely used document tool.' },
+  { id: 'phoenix', name: 'Phoenix', description: 'Certificate generation that retains required algorithm parameters.' },
+  { id: 'mockk', name: 'MockK', description: 'Coroutine verification without a leaked Continuation.' },
+];
+---
+<section class="oss-showcase wrap" id="open-source" aria-labelledby="oss-title">
+  <div class="section-heading">
+    <div><span class="section-index">04 / OPEN SOURCE</span><h2 id="oss-title">Different codebases.<br /><em>The same care.</em></h2></div>
+    <p>Focused fixes, shared upstream.<br />Every contribution has a trail.</p>
+  </div>
+  <ContributionStats />
+  <div class="oss-feature-grid">
+    {highlights.map(highlight => (
+      <a class="oss-feature" href={`/open-source.html#${highlight.id}`}>
+        <span class="oss-feature-top">UPSTREAM / {merged.filter(pr => contributionRepo(pr.url).split('/')[1] === highlight.id).length} MERGED</span>
+        <h3>{highlight.name}</h3><p>{highlight.description}</p>
+        <span class="study-link">Explore contributions <span aria-hidden="true">+</span></span>
+      </a>
+    ))}
+  </div>
+  <a class="archive-cta" href="/open-source.html">Browse the full contribution index <span aria-hidden="true">+</span></a>
+</section>
