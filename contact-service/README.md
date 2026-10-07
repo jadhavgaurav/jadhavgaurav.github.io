@@ -5,6 +5,7 @@ Deploy this directory as a separate Vercel project with Framework Preset **Other
 ## Activate
 
 1. Verify `iamgaurav.online` and sender `hello@iamgaurav.online`, named **Gaurav Jadhav**, in Brevo. Transactional sending must be active.
+   If Brevo IP security is enabled, authorize the backend's outbound addresses too. Authorizing a developer's local IP does not authorize a hosted endpoint. Vercel's default outbound addresses can change; use an appropriate fixed-egress setup or another host with a fixed IP rather than assuming one observed address is permanent. Do not disable IP security as part of deployment without an explicit decision by the account owner.
 2. Set `BREVO_API_KEY`, `CONTACT_TO_EMAIL`, and `ALLOWED_ORIGINS` in the service's production environment. Never put credentials in `contact-config.js` or commit an environment file.
 3. Before enabling email, configure a Vercel WAF rate-limit rule for POST requests to `/api/contact`: **5 requests per IP per 10 minutes**, deny when exceeded. This applies across server instances. CORS, honeypots, and minimum completion time are supplementary checks, not substitutes for rate limiting. Additional bot protection can be added if abuse appears.
 4. Set `CONTACT_ENABLED=true` and deploy. Put the public production URL ending in `/api/contact` into the portfolio's `contact-config.js`.
@@ -17,3 +18,5 @@ Brevo's batch idempotency key suppresses duplicate sends for 30 minutes. The bro
 `npm test` runs validation, email-content, failure, and retry checks with a fake transport. It sends no real email.
 
 References: [Brevo batch sending](https://developers.brevo.com/docs/batch-send-transactional-emails), [Brevo idempotency](https://developers.brevo.com/docs/heterogenous-versions-batch-emails), [Vercel Web API functions](https://vercel.com/docs/functions/runtimes/node-js), [Vercel rate limiting](https://vercel.com/docs/vercel-firewall/vercel-waf/rate-limiting).
+
+The Brevo key can also be stored as the repository's GitHub Actions secret `BREVO_API_KEY`. That is suitable for an explicitly configured deployment workflow; GitHub Pages cannot read Actions secrets at runtime. Never inject it into the public JavaScript during a Pages build. `.vercelignore` excludes local environment files from backend source uploads.
