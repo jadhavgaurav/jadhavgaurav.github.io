@@ -53,7 +53,7 @@ main { min-height:65vh; }
 .more-work,.archive-cta { background:white; border:1px solid var(--line); border-radius:9px; padding:20px 24px; font-size:.9375rem; }
 .more-work strong { color:var(--blue); }
 .practice-section { padding-block:80px; background:#edf0f6; border-block:1px solid var(--line); }
-.practice-list { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; align-items:start; }
+.practice-list { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; align-items:stretch; }
 .practice-item { display:flex; flex-direction:column; gap:20px; background:white; border:1px solid var(--line); border-radius:var(--radius); padding:28px; }
 .practice-label h3 { margin:15px 0 8px; font-size:1.75rem; }
 .practice-lede { font-size:1.0625rem; line-height:1.5; margin:0; }
@@ -215,7 +215,6 @@ main { min-height:65vh; }
   .oss-stats strong { font-size:2rem; }
   .oss-stats>div>span { font-size:.75rem; }
   .snapshot-note { grid-column:1/-1; text-align:left; border-top:1px solid var(--line); padding-top:12px; font-size:.6875rem; }
-  .snapshot-note br { display:none; }
   .oss-feature-grid { grid-template-columns:1fr 1fr; gap:12px; }
   .oss-feature { padding:18px; }
   .oss-feature h3 { font-size:1.4rem; }
